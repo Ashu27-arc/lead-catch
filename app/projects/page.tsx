@@ -3,28 +3,28 @@ import { Reveal } from "@/components/Reveal";
 
 const projects = [
   {
-    title: "B2B SaaS — SEO + Landing Pages",
-    desc: "Content engine + demo-focused landing pages with clean tracking.",
-    tags: ["SEO", "Landing pages", "Tracking"],
-    outcome: ["Demo requests up 2.1x", "Top-3 for 14 keywords", "Better lead quality"],
+    title: "Real Estate Builder — Lead Landing Pages + Ads",
+    desc: "Offer positioning, lead forms, and tracking-ready landing pages for property inquiries.",
+    tags: ["Meta + Google Ads", "Landing pages", "Lead tracking"],
+    outcome: ["Higher lead relevance", "Better call/site-visit attribution", "Weekly creative improvements"],
   },
   {
-    title: "D2C Brand — Meta Ads + CRO",
-    desc: "Creative iteration + conversion upgrades for better ROAS stability.",
-    tags: ["Meta Ads", "CRO", "Creative"],
-    outcome: ["CPA down 28%", "CVR up 1.6x", "Scale-ready funnel"],
+    title: "Interior Design Studio — SEO + CRO for Inquiries",
+    desc: "Technical/on-page SEO and conversion-focused content & pages for interior leads.",
+    tags: ["SEO", "CRO", "Content"],
+    outcome: ["Compounding local visibility", "More qualified inquiries", "Clear reporting on pipeline quality"],
   },
   {
-    title: "Local Services — Google Ads",
-    desc: "High-intent search campaigns + call/lead tracking improvements.",
-    tags: ["Google Ads", "Lead gen", "Analytics"],
-    outcome: ["Lead volume up 3.4x", "CPL down 22%", "Better call quality"],
+    title: "Architect/Renovation — Google Ads + Call Tracking",
+    desc: "High-intent search targeting and call/lead tracking improvements for project bookings.",
+    tags: ["Google Ads", "Call tracking", "Analytics"],
+    outcome: ["Stronger lead intent match", "Clean tracking for calls/forms", "Faster experiment cycle"],
   },
   {
-    title: "Startup Website — Next.js Revamp",
-    desc: "Modern UI, better messaging, faster performance, and SEO hygiene.",
-    tags: ["Next.js", "UI/UX", "Performance"],
-    outcome: ["Faster load times", "Clearer positioning", "Better conversion flow"],
+    title: "Lead Capture Website — UX + Performance Build",
+    desc: "Mobile-first marketing website/landing page build with SEO-ready structure and conversion flow.",
+    tags: ["Website Development", "UX/UI", "Performance"],
+    outcome: ["Faster load times", "Clearer messaging", "Improved conversion path"],
   },
 ] as const;
 
@@ -36,18 +36,18 @@ export default function ProjectsPage() {
         <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
           <Reveal>
             <p className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/70 px-3 py-1 text-xs font-medium text-zinc-700 backdrop-blur dark:border-white/10 dark:bg-black/40 dark:text-zinc-200">
-              Projects
+              Results & project formats
             </p>
           </Reveal>
           <Reveal delayMs={90}>
             <h1 className="mt-5 text-balance text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-              Work that’s built to convert.
+              Work built for real estate & interior leads.
             </h1>
           </Reveal>
           <Reveal delayMs={150}>
             <p className="mt-5 max-w-2xl text-pretty text-base leading-7 text-zinc-600 dark:text-zinc-300">
-              This is a sample portfolio format. We tailor landing pages,
-              tracking, and campaigns to your niche and offer.
+              We tailor ads, SEO, landing pages, and tracking to your project type
+              and offer — so inquiries are measurable and repeatable.
             </p>
           </Reveal>
           <Reveal delayMs={210}>
@@ -56,13 +56,13 @@ export default function ProjectsPage() {
                 href="/services"
                 className="inline-flex h-11 items-center justify-center rounded-full border border-black/15 bg-white px-5 text-sm font-medium text-black transition-[transform,background-color] hover:bg-[color-mix(in_oklab,var(--brand)_10%,transparent)] active:translate-y-px dark:border-white/15 dark:bg-black dark:text-white dark:hover:bg-[color-mix(in_oklab,var(--brand)_18%,transparent)]"
               >
-                View services
+                Explore services
               </Link>
               <Link
                 href="/contact-us"
                 className="inline-flex h-11 items-center justify-center rounded-full bg-(--brand) px-5 text-sm font-medium text-(--brand-contrast) transition-[transform,filter,background-color] hover:bg-(--brand-2) hover:brightness-105 active:translate-y-px"
               >
-                Start a project
+                Get a proposal
               </Link>
             </div>
           </Reveal>
@@ -117,8 +117,8 @@ export default function ProjectsPage() {
               <div>
                 <div className="text-sm font-semibold">Have something similar?</div>
                 <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-300">
-                  We’ll understand your product/service and propose the best
-                  channel mix plus dev deliverables.
+                  Share your project type and target city. We’ll propose the best
+                  channel mix plus lead-capture deliverables.
                 </div>
               </div>
               <Link

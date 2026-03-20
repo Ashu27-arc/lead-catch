@@ -4,29 +4,29 @@ import { Reveal } from "@/components/Reveal";
 const serviceGroups = [
   {
     title: "Marketing",
-    desc: "Simple, focused services: Meta Ads + SEO. Clear reporting and measurable outcomes.",
+    desc: "Meta + Google lead generation and Noida-focused SEO for real estate & interior design businesses.",
     items: [
       {
-        title: "Meta Ads",
-        desc: "Account setup, creatives direction, audience strategy, and weekly optimizations for leads/sales.",
+        title: "Digital Advertising",
+        desc: "Meta + Google campaigns for property and interior leads: targeting, creatives direction, lead forms, and weekly optimization.",
       },
       {
-        title: "SEO",
-        desc: "Technical SEO, on-page fixes, content plan, and compounding rankings that bring qualified traffic.",
+        title: "SEO for Real Estate & Interiors",
+        desc: "Technical SEO, on-page improvements, and content planning that compounds rankings and brings qualified local search traffic.",
       },
     ],
   },
   {
     title: "Development",
-    desc: "Builds that load fast and convert: websites and mobile apps.",
+    desc: "Conversion-ready sites and apps designed to capture leads and track pipeline impact.",
     items: [
       {
         title: "Website Development",
-        desc: "Modern marketing websites/landing pages (Next.js), SEO-ready structure, and clean UI.",
+        desc: "Fast marketing websites/landing pages for builders and interior studios with SEO-ready structure, UX, and lead capture.",
       },
       {
         title: "Mobile App Development",
-        desc: "Android/iOS apps with clean UX, API integration, analytics events, and production-ready builds.",
+        desc: "Android/iOS apps with clean UX, API integration, analytics events, and production-ready builds for your customer journey.",
       },
     ],
   },
@@ -40,18 +40,18 @@ export default function ServicesPage() {
         <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
           <Reveal>
             <p className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/70 px-3 py-1 text-xs font-medium text-zinc-700 backdrop-blur dark:border-white/10 dark:bg-black/40 dark:text-zinc-200">
-              Services
+              Services for real estate & interiors
             </p>
           </Reveal>
           <Reveal delayMs={90}>
             <h1 className="mt-5 text-balance text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-              4 core services, done well.
+              Built to generate qualified leads in Noida.
             </h1>
           </Reveal>
           <Reveal delayMs={150}>
             <p className="mt-5 max-w-2xl text-pretty text-base leading-7 text-zinc-600 dark:text-zinc-300">
-              Meta Ads, SEO, Website Development, and Mobile App Development — a
-              simple scope, clear deliverables, and fast execution.
+              Digital advertising, SEO, lead-capture websites, and mobile apps —
+              delivered with clear scope, weekly reporting, and conversion-focused execution.
             </p>
           </Reveal>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -59,13 +59,13 @@ export default function ServicesPage() {
               href="/projects"
               className="inline-flex h-11 items-center justify-center rounded-full bg-(--brand) px-5 text-sm font-medium text-(--brand-contrast) transition-[transform,filter,background-color] hover:bg-(--brand-2) hover:brightness-105 active:translate-y-px"
             >
-              See projects
+              See results
             </Link>
             <Link
               href="/contact-us"
               className="inline-flex h-11 items-center justify-center rounded-full border border-black/15 bg-white px-5 text-sm font-medium text-black transition-[transform,background-color] hover:bg-[color-mix(in_oklab,var(--brand)_10%,transparent)] active:translate-y-px dark:border-white/15 dark:bg-black dark:text-white dark:hover:bg-[color-mix(in_oklab,var(--brand)_18%,transparent)]"
             >
-              Get a quote
+              Get a free consultation
             </Link>
           </div>
         </div>
@@ -84,10 +84,10 @@ export default function ServicesPage() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {[
-              { k: "Setup", v: "Tracking + dashboard + baseline audit" },
+              { k: "Setup", v: "Tracking + offer/landing audit + baseline" },
               { k: "Cadence", v: "Weekly reporting + priority updates" },
-              { k: "Execution", v: "Campaigns + pages + creatives" },
-              { k: "Optimization", v: "CRO + scaling + learning loop" },
+              { k: "Execution", v: "Ads + creatives + lead pages" },
+              { k: "Optimization", v: "CRO + scaling + SEO learning loop" },
             ].map((x) => (
               <div
                 key={x.k}
@@ -143,8 +143,8 @@ export default function ServicesPage() {
                   Not sure what you need?
                 </div>
                 <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-300">
-                  Share your goal and current channels. We’ll recommend the best
-                  plan for you.
+                  Share your business type, city (Noida), and lead goals. We’ll
+                  recommend a plan that matches your funnel.
                 </div>
               </div>
               <Link

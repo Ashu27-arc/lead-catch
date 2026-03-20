@@ -4,7 +4,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { FreeAuditModal } from "@/components/FreeAuditModal";
 
 const navItems = [
   { href: "/about-us", label: "About" },
@@ -17,6 +18,26 @@ export function SiteHeader() {
   const router = useRouter();
   const pathname = usePathname();
   const [isSwitching, setIsSwitching] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isAuditModalOpen, setIsAuditModalOpen] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (!isMenuOpen) return;
+
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsMenuOpen(false);
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [isMenuOpen]);
 
   const handleNavSwitch = (
     event: React.MouseEvent<HTMLAnchorElement>,
@@ -27,6 +48,7 @@ export function SiteHeader() {
     }
 
     event.preventDefault();
+    setIsMenuOpen(false);
     setIsSwitching(true);
 
     // Show loader first, then navigate.
@@ -36,8 +58,17 @@ export function SiteHeader() {
     }, 420);
   };
 
+  const openAuditModal = () => {
+    setIsMenuOpen(false);
+    setIsAuditModalOpen(true);
+  };
+
   return (
     <>
+      <FreeAuditModal
+        open={isAuditModalOpen}
+        onClose={() => setIsAuditModalOpen(false)}
+      />
       {isSwitching ? (
         <div className="fixed inset-0 z-60 flex items-center justify-center bg-background/70 backdrop-blur-sm">
           <div className="lc-reveal rounded-full" data-visible="true" data-variant="fade">
@@ -87,16 +118,113 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
-          <Link
-            href="/contact-us"
+        <button
+          type="button"
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMenuOpen}
+          className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-black/10 bg-background/70 text-foreground md:hidden"
+          onClick={() => setIsMenuOpen((v) => !v)}
+        >
+          <span className="sr-only">Menu</span>
+          <span className="relative h-4 w-5">
+            <span
+              className={[
+                "absolute left-0 top-0 h-[2px] w-full rounded-full bg-current transition-transform",
+                isMenuOpen ? "translate-y-[6px] rotate-45" : "",
+              ].join(" ")}
+            />
+            <span
+              className={[
+                "absolute left-0 top-[6px] h-[2px] w-full rounded-full bg-current transition-opacity",
+                isMenuOpen ? "opacity-0" : "opacity-100",
+              ].join(" ")}
+            />
+            <span
+              className={[
+                "absolute left-0 top-[12px] h-[2px] w-full rounded-full bg-current transition-transform",
+                isMenuOpen ? "-translate-y-[6px] -rotate-45" : "",
+              ].join(" ")}
+            />
+          </span>
+        </button>
+
+        <div className="hidden items-center gap-2 md:flex">
+          <button
+            type="button"
             className="inline-flex h-10 items-center justify-center rounded-full bg-linear-to-r from-(--accent) to-(--accent-2) px-4 text-sm font-semibold text-(--brand-contrast) ring-1 ring-black/10 transition-[filter,transform] hover:brightness-105 active:translate-y-px dark:ring-white/10"
-            onClick={(e) => handleNavSwitch(e, "/contact-us")}
+            onClick={openAuditModal}
           >
             Get a Free Audit
-          </Link>
+          </button>
         </div>
       </div>
+
+      {isMenuOpen ? (
+        <div className="fixed inset-0 z-55 md:hidden" role="dialog" aria-modal="true">
+          <button
+            type="button"
+            className="absolute inset-0 bg-background/60 backdrop-blur-sm"
+            aria-label="Close menu overlay"
+            onClick={() => setIsMenuOpen(false)}
+          />
+
+          <div className="absolute right-0 top-0 h-full w-[85%] max-w-sm border-l border-black/10 bg-background/95 backdrop-blur p-4">
+            <div className="flex items-center justify-between gap-3">
+              <Link
+                href="/"
+                className="group inline-flex items-center gap-2 font-semibold tracking-tight"
+                aria-label="Home"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-(--background)/80 ring-1 ring-black/10 backdrop-blur dark:ring-white/10">
+                  <Image
+                    src="/logo.png"
+                    alt="LeadCatch logo"
+                    width={28}
+                    height={28}
+                    className="h-7 w-7"
+                    priority
+                  />
+                </span>
+                <span className="text-base text-foreground">LeadCatch</span>
+              </Link>
+            </div>
+
+            <nav className="mt-6 flex flex-col gap-4 text-sm">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={[
+                    "rounded-xl border border-black/10 bg-white/70 px-4 py-3 font-medium text-foreground",
+                    item.href === pathname ? "ring-1 ring-(--brand)" : "",
+                  ].join(" ")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+
+            <div className="mt-6">
+              <button
+                type="button"
+                className="inline-flex h-11 w-full items-center justify-center rounded-full bg-linear-to-r from-(--accent) to-(--accent-2) px-5 text-sm font-semibold text-(--brand-contrast) ring-1 ring-black/10 transition-[filter,transform] hover:brightness-105 active:translate-y-px dark:ring-white/10"
+                onClick={openAuditModal}
+              >
+                Get a Free Audit
+              </button>
+              <div className="mt-3 text-xs text-(--foreground)/60">
+                Tip: Press <span className="font-semibold">Esc</span> to close.
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : null}
       </header>
     </>
   );

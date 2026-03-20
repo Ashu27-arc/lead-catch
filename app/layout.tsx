@@ -15,10 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "LeadCatch — Marketing Agency",
+  title: "Lead Catch — Real Estate & Interior Marketing (Noida)",
   description:
-    "Performance marketing agency for lead generation: ads, SEO, landing pages & CRO with clear reporting.",
-  metadataBase: new URL("https://example.com"),
+    "Lead Catch helps real estate & interior design businesses grow with digital advertising, SEO, conversion-focused websites, and lead tracking in Noida.",
+  metadataBase: new URL("https://www.leadcatch.in/"),
 };
 
 export default function RootLayout({

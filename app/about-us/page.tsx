@@ -9,19 +9,19 @@ export default function AboutUsPage() {
         <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
           <Reveal>
             <p className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/70 px-3 py-1 text-xs font-medium text-zinc-700 backdrop-blur dark:border-white/10 dark:bg-black/40 dark:text-zinc-200">
-              About LeadCatch Studio
+              Real estate & interior marketing, done end-to-end
             </p>
           </Reveal>
           <Reveal delayMs={90}>
             <h1 className="mt-5 text-balance text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-              We build growth systems — marketing + development, together.
+              We build lead growth systems for real estate & interiors.
             </h1>
           </Reveal>
           <Reveal delayMs={150}>
             <p className="mt-5 max-w-2xl text-pretty text-base leading-7 text-zinc-600 dark:text-zinc-300">
-              We don’t just run campaigns. We design end-to-end pipeline: offer →
-              ads/SEO → landing pages → tracking → conversion improvements — so
-              growth is measurable and repeatable.
+              We don’t just run campaigns. We design a complete pipeline for
+              Noida businesses: offer → ads/SEO → lead landing pages → tracking →
+              conversion improvements — so growth is measurable and repeatable.
             </p>
           </Reveal>
 
@@ -37,7 +37,7 @@ export default function AboutUsPage() {
                 href="/contact-us"
                 className="inline-flex h-11 items-center justify-center rounded-full border border-black/15 bg-white px-5 text-sm font-medium text-black transition-[transform,background-color] hover:bg-[color-mix(in_oklab,var(--brand)_10%,transparent)] active:translate-y-px dark:border-white/15 dark:bg-black dark:text-white dark:hover:bg-[color-mix(in_oklab,var(--brand)_18%,transparent)]"
               >
-                Book a call
+                Get free consultation
               </Link>
             </div>
           </Reveal>
@@ -55,7 +55,8 @@ export default function AboutUsPage() {
             <Reveal delayMs={90}>
               <p className="mt-4 text-zinc-600 dark:text-zinc-300">
                 The best “shortcut” to growth is discipline: clear goals, clean
-                data, fast shipping, and continuous testing.
+                tracking, fast shipping, and continuous testing for real estate
+                and interior leads.
               </p>
             </Reveal>
           </div>
@@ -63,20 +64,20 @@ export default function AboutUsPage() {
           <div className="grid gap-4 sm:grid-cols-2">
             {[
               {
-                title: "Pipeline > vanity",
-                desc: "Leads, meetings, revenue — not likes.",
+                title: "Qualified inquiries > vanity",
+                desc: "We optimize for lead quality, booked site visits, and revenue impact.",
               },
               {
                 title: "Speed with quality",
-                desc: "Landing pages & experiments ship fast.",
+                desc: "We ship lead pages, creatives, and experiments fast without breaking tracking.",
               },
               {
                 title: "Clear reporting",
-                desc: "Simple dashboards and weekly updates.",
+                desc: "Simple dashboards and weekly updates focused on conversion and pipeline.",
               },
               {
-                title: "Dev-friendly",
-                desc: "Tracking, forms, pages — properly implemented.",
+                title: "Lead tracking that works",
+                desc: "Forms, calls, and analytics events implemented properly for measurable growth.",
               },
             ].map((v) => (
               <Reveal key={v.title} delayMs={120}>
@@ -104,22 +105,22 @@ export default function AboutUsPage() {
               {
                 step: "01",
                 title: "Audit",
-                desc: "Current channels, tracking, landing pages, offer clarity.",
+                desc: "Current ads/SEO, tracking, landing pages, and offer clarity for your niche.",
               },
               {
                 step: "02",
                 title: "Plan",
-                desc: "90-day roadmap: experiments + priorities + KPIs.",
+                desc: "Roadmap for lead generation: experiments, priorities, and KPIs that matter.",
               },
               {
                 step: "03",
                 title: "Build",
-                desc: "Campaigns, creatives, landing pages, tracking events.",
+                desc: "Campaigns, creatives, lead landing pages, and tracking events (calls/forms).",
               },
               {
                 step: "04",
                 title: "Optimize",
-                desc: "CRO, budget scaling, SEO iterations, weekly reporting.",
+                desc: "CRO, budget scaling, SEO iterations, and weekly reporting based on pipeline quality.",
               },
             ].map((p) => (
               <div
@@ -142,10 +143,10 @@ export default function AboutUsPage() {
           <div className="mt-12 rounded-3xl border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-black">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <div className="text-sm font-semibold">Want a quick audit?</div>
+                <div className="text-sm font-semibold">Want a free growth audit?</div>
                 <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-300">
-                  Share your goal and budget range. We’ll send an action plan
-                  within 48 hours.
+                  Share your goal, project type, and budget range. We’ll send an
+                  action plan within 48 hours.
                 </div>
               </div>
               <Link

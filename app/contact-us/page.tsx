@@ -14,13 +14,14 @@ export default function ContactUsPage() {
           </Reveal>
           <Reveal delayMs={90}>
             <h1 className="mt-5 text-balance text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-              Let’s talk growth.
+              Get your free consultation.
             </h1>
           </Reveal>
           <Reveal delayMs={150}>
             <p className="mt-5 max-w-2xl text-pretty text-base leading-7 text-zinc-600 dark:text-zinc-300">
-              Share your goal, budget range, and current channels. We’ll send a
-              recommended plan and the next steps.
+              Share your business goal, budget range, and current channels.
+              We’ll send a recommended action plan and the next steps within
+              48 hours.
             </p>
           </Reveal>
         </div>
@@ -31,7 +32,7 @@ export default function ContactUsPage() {
           <div>
             <Reveal>
               <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-                Reach us
+                Reach Lead Catch
               </h2>
             </Reveal>
             <Reveal delayMs={90}>
@@ -94,7 +95,7 @@ export default function ContactUsPage() {
 
           <Reveal delayMs={160}>
             <div className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-white/10 dark:bg-black">
-              <div className="text-sm font-semibold">Send a message</div>
+              <div className="text-sm font-semibold">Send a message (free audit)</div>
               <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
                 This is a UI-only demo form (submissions aren’t wired yet). You
                 can email us the details for now.
@@ -155,7 +156,8 @@ export default function ContactUsPage() {
               </button>
 
               <p className="text-xs text-zinc-500">
-                Want a faster start? Email us with your goal + budget range.
+                Want a faster start? Email us your project type + budget range
+                and we’ll reply with next steps.
               </p>
               </form>
             </div>

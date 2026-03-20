@@ -10,27 +10,27 @@ export default function Home() {
             <div>
               <Reveal>
                 <p className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/70 px-3 py-1 text-xs font-medium text-zinc-700 backdrop-blur dark:border-white/10 dark:bg-black/40 dark:text-zinc-200">
-                  Performance marketing • CRO • Landing pages
+                  Real estate & interior • Leads • SEO • Ads
                 </p>
               </Reveal>
               <Reveal delayMs={80}>
                 <h1 className="mt-5 text-balance text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-                  A marketing agency that grows{" "}
+                  Grow your{" "}
                   <span className="underline decoration-(--brand)/60 underline-offset-4">
-                    leads
+                    real estate & interior
                   </span>{" "}
-                  and{" "}
+                  business with{" "}
                   <span className="underline decoration-(--accent)/70 underline-offset-4">
-                    revenue
+                    predictable leads
                   </span>{" "}
-                  together.
+                  in Noida.
                 </h1>
               </Reveal>
               <Reveal delayMs={140}>
                 <p className="mt-5 max-w-xl text-pretty text-base leading-7 text-zinc-600 dark:text-zinc-300">
-                  We build predictable pipeline with Meta Ads, SEO,
-                  high-converting landing pages, and conversion-rate optimization
-                  — backed by clear reporting.
+                  We help builders, interior studios, and architects turn traffic into
+                  inquiries using Meta Ads, SEO, conversion-ready websites, and
+                  lead tracking with clear weekly reporting.
                 </p>
               </Reveal>
 
@@ -40,13 +40,13 @@ export default function Home() {
                     href="/contact-us"
                     className="inline-flex h-11 items-center justify-center rounded-full bg-(--brand) px-5 text-sm font-medium text-(--brand-contrast) transition-[transform,filter,background-color] hover:bg-(--brand-2) hover:brightness-105 active:translate-y-px"
                   >
-                    Free Growth Audit
+                    Get Free Consultation
                   </a>
                   <a
                     href="/projects"
                     className="inline-flex h-11 items-center justify-center rounded-full border border-black/15 bg-white px-5 text-sm font-medium text-black transition-[transform,background-color] hover:bg-[color-mix(in_oklab,var(--brand)_10%,transparent)] active:translate-y-px dark:border-white/15 dark:bg-black dark:text-white dark:hover:bg-[color-mix(in_oklab,var(--brand)_18%,transparent)]"
                   >
-                    See projects
+                    See results
                   </a>
                 </div>
               </Reveal>
@@ -55,30 +55,30 @@ export default function Home() {
                 <Reveal delayMs={260}>
                   <div className="rounded-2xl border border-black/10 bg-white/60 p-4 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-md dark:border-white/10 dark:bg-white/5">
                     <div className="text-2xl font-semibold tracking-tight">
-                      2–6x
+                      10+
                     </div>
                     <div className="mt-1 text-zinc-600 dark:text-zinc-400">
-                      ROAS targets
+                      years focused on your niche
                     </div>
                   </div>
                 </Reveal>
                 <Reveal delayMs={320}>
                   <div className="rounded-2xl border border-black/10 bg-white/60 p-4 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-md dark:border-white/10 dark:bg-white/5">
                     <div className="text-2xl font-semibold tracking-tight">
-                      14d
+                      200+
                     </div>
                     <div className="mt-1 text-zinc-600 dark:text-zinc-400">
-                      launch cycles
+                      satisfied real clients
                     </div>
                   </div>
                 </Reveal>
                 <Reveal delayMs={380}>
                   <div className="rounded-2xl border border-black/10 bg-white/60 p-4 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-md dark:border-white/10 dark:bg-white/5">
                     <div className="text-2xl font-semibold tracking-tight">
-                      Weekly
+                      150%
                     </div>
                     <div className="mt-1 text-zinc-600 dark:text-zinc-400">
-                      reporting
+                      avg lead lift (6 months)
                     </div>
                   </div>
                 </Reveal>
@@ -97,36 +97,36 @@ export default function Home() {
                 <div className="mt-6 grid gap-4 sm:grid-cols-2">
                   <div className="rounded-2xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black">
                     <div className="text-xs text-zinc-500">Leads</div>
-                    <div className="mt-1 text-2xl font-semibold">418</div>
+                      <div className="mt-1 text-2xl font-semibold">—</div>
                     <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-white/10">
-                      <div className="h-full w-[74%] rounded-full bg-(--brand)" />
+                        <div className="h-full w-[40%] rounded-full bg-(--brand)" />
                     </div>
                   </div>
                   <div className="rounded-2xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black">
                     <div className="text-xs text-zinc-500">Qualified</div>
-                    <div className="mt-1 text-2xl font-semibold">152</div>
+                      <div className="mt-1 text-2xl font-semibold">—</div>
                     <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-white/10">
-                      <div className="h-full w-[52%] rounded-full bg-(--brand-2)" />
+                        <div className="h-full w-[30%] rounded-full bg-(--brand-2)" />
                     </div>
                   </div>
                   <div className="rounded-2xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black">
                     <div className="text-xs text-zinc-500">Meetings</div>
-                    <div className="mt-1 text-2xl font-semibold">46</div>
+                      <div className="mt-1 text-2xl font-semibold">—</div>
                     <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-white/10">
-                      <div className="h-full w-[38%] rounded-full bg-(--accent)" />
+                        <div className="h-full w-[18%] rounded-full bg-(--accent)" />
                     </div>
                   </div>
                   <div className="rounded-2xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black">
                     <div className="text-xs text-zinc-500">Revenue</div>
-                    <div className="mt-1 text-2xl font-semibold">₹18.4L</div>
+                      <div className="mt-1 text-2xl font-semibold">—</div>
                     <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-white/10">
-                      <div className="h-full w-[61%] rounded-full bg-(--accent-2)" />
+                        <div className="h-full w-[25%] rounded-full bg-(--accent-2)" />
                     </div>
                   </div>
                 </div>
                 <div className="mt-6 rounded-2xl border border-black/10 bg-white p-4 text-sm text-zinc-600 dark:border-white/10 dark:bg-black dark:text-zinc-300">
-                  “We don’t optimize for vanity metrics. We optimize for
-                  pipeline: qualified leads → meetings → revenue.”
+                    “We optimize for pipeline quality: inquiries → qualified leads →
+                    booked site visits → revenue.”
                 </div>
               </div>
               </Reveal>
@@ -140,16 +140,16 @@ export default function Home() {
         <div className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-sm text-zinc-600 dark:text-zinc-300">
-              Trusted by founders & growth teams (sample logos)
+              Trusted by real estate & interior teams in Noida
             </p>
             <div className="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:justify-end">
               {[
-                "Nimbus",
-                "Brightly",
-                "Northwind",
-                "Aster",
-                "Monolith",
-                "Kite",
+                "Builders",
+                "Interior Studios",
+                "Architects",
+                "Renovation Teams",
+                "Property Developers",
+                "Dealers & Agents",
               ].map((name) => (
                 <div
                   key={name}
@@ -183,23 +183,23 @@ export default function Home() {
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {[
             {
-              title: "Meta Ads",
-              desc: "Account setup, audience strategy, creatives direction, and weekly optimization for leads/sales.",
+              title: "Digital Advertising",
+              desc: "Meta + Google ads for property and interior leads: creatives direction, targeting, lead forms, and weekly optimization.",
               tag: "Ads",
             },
             {
-              title: "SEO",
-              desc: "Technical fixes, on-page improvements, content plan, and compounding rankings.",
+              title: "SEO for Real Estate & Interiors",
+              desc: "Technical SEO, on-page improvements, and content planning for projects, services, and local search in Noida.",
               tag: "Organic",
             },
             {
               title: "Website Development",
-              desc: "Fast marketing websites/landing pages with modern UI and SEO-ready structure.",
+              desc: "Conversion-ready websites/landing pages for builders and interior studios with speed, UX, and SEO hygiene.",
               tag: "Web",
             },
             {
               title: "Mobile App Development",
-              desc: "Android/iOS apps with clean UX, API integration, analytics events, and production-ready builds.",
+              desc: "Android/iOS apps with clean UX, API integration, analytics events, and production-ready builds for your customer journey.",
               tag: "App",
               center: true,
             },
@@ -260,20 +260,16 @@ export default function Home() {
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
             {[
               {
-                title: "D2C Skincare — Meta + CRO",
-                bullets: ["CPA down 28%", "CVR up 1.6x", "ROAS stable at scale"],
+                title: "Real Estate Builder — Ads + Lead Landing Pages",
+                bullets: ["Lead quality improvements", "Better call/site-visit tracking", "Weekly creative iterations"],
               },
               {
-                title: "B2B SaaS — SEO + LPs",
-                bullets: [
-                  "Top-3 rankings for 14 keywords",
-                  "Demo requests up 2.1x",
-                  "Sales cycle shortened",
-                ],
+                title: "Interior Design Studio — SEO + Offer Pages",
+                bullets: ["Local SEO growth in Noida", "Project/service content strategy", "Conversion-focused on-page fixes"],
               },
               {
-                title: "Local Services — Google Ads",
-                bullets: ["Lead volume up 3.4x", "CPL down 22%", "Call quality improved"],
+                title: "Architect/Renovation — Google Ads + CRO",
+                bullets: ["High-intent search targeting", "Offer positioning and forms", "Tracking + CRO learning loop"],
               },
             ].map((c) => (
               <div
@@ -305,18 +301,18 @@ export default function Home() {
           {[
             {
               quote:
-                "Reporting was crystal clear. Within 2 weeks we saw better lead quality and more booked calls.",
-              name: "Founder, B2B SaaS",
+                "Reporting was crystal clear. We started seeing more relevant inquiries and better booked site visits.",
+              name: "Founder, Real Estate Team",
             },
             {
               quote:
-                "The landing page revamp and offer tweaks lifted conversions immediately.",
-              name: "Head of Growth, D2C",
+                "The landing page structure and offer tweaks improved our conversion flow right away.",
+              name: "Marketing Lead, Interior Studio",
             },
             {
               quote:
-                "They test fast. Creative iterations + audience strategy gave us stable scaling.",
-              name: "Marketing Manager, Services",
+                "Lead Catch tests quickly. Ads, SEO, and tracking improvements helped us scale with confidence.",
+              name: "Growth Lead, Developer/Architect",
             },
           ].map((t) => (
             <figure
@@ -352,23 +348,23 @@ export default function Home() {
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
             {[
               {
-                name: "Starter",
-                price: "₹29k/mo",
-                desc: "For early-stage brands testing channels.",
-                items: ["1 channel focus", "2 LP optimizations/mo", "Weekly report"],
+                name: "Lead Audit",
+                price: "On request",
+                desc: "For new campaigns: we audit tracking, offers, and lead capture flow.",
+                items: ["Tracking + landing audit", "Noida-focused SEO checklist", "Action plan in 48 hours"],
               },
               {
-                name: "Growth",
-                price: "₹59k/mo",
-                desc: "For scaling spend & conversion rates.",
-                items: ["2 channels", "4 experiments/mo", "Dashboards + tracking"],
+                name: "Growth Plan",
+                price: "On request",
+                desc: "For consistent lead generation across ads + SEO with conversion improvements.",
+                items: ["Meta + SEO execution", "Weekly reporting", "CRO experiments (landing + forms)"],
                 highlight: true,
               },
               {
                 name: "Scale",
                 price: "Custom",
-                desc: "For multi-product / multi-geo growth.",
-                items: ["Full-funnel", "Creative production", "CRO + SEO + Ads"],
+                desc: "For multi-project/multi-location growth with full-funnel measurement.",
+                items: ["Full-funnel strategy", "Creative production support", "CRO + SEO + Ads coordination"],
               },
             ].map((p) => (
               <div
@@ -437,20 +433,20 @@ export default function Home() {
         <div className="mt-10 grid gap-4 md:grid-cols-2">
           {[
             {
-              q: "Minimum contract?",
-              a: "Typically 2 months. Month 1 is setup + learning; month 2 is optimization and scaling.",
+              q: "How can digital marketing help my real estate business?",
+              a: "Digital marketing increases online visibility, generates quality leads through targeted ads, builds authority with SEO, and nurtures prospects with conversion-focused content. We focus on reaching serious buyers and sellers actively searching.",
             },
             {
-              q: "Do you build landing pages?",
-              a: "Yes. We ship fast pages with tracking, and we can optimize existing pages too.",
+              q: "What makes Lead Catch different?",
+              a: "Lead Catch specializes in real estate and interior design marketing. With 10+ years of experience and 200+ successful client engagements, we bring niche insights, tailored strategy, and measurable ROI with clear reporting.",
             },
             {
-              q: "Can you guarantee results?",
-              a: "We can’t guarantee outcomes, but we guarantee disciplined experiments, transparency, and speed.",
+              q: "How long does it take to see results from SEO?",
+              a: "You may see initial improvements in 3–6 months, with more significant results typically between 6–12 months. We share monthly performance updates and optimization recommendations.",
             },
             {
-              q: "What do you need from us?",
-              a: "Access to ad accounts/analytics, past performance data, and 1 weekly 30-min sync.",
+              q: "Do you offer website design services?",
+              a: "Yes. We create high-converting, mobile-responsive websites for real estate and interior design businesses. They are optimized for speed, UX, and lead generation with integrated tracking and analytics.",
             },
           ].map((f) => (
             <details
@@ -479,11 +475,11 @@ export default function Home() {
           <div className="grid gap-10 lg:grid-cols-2">
             <div>
               <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-                Let’s grow your pipeline
+                Get your free consultation
               </h2>
               <p className="mt-4 max-w-xl text-zinc-600 dark:text-zinc-300">
-            Share your goal, budget range, and current channels. We’ll send an
-            action plan within 48 hours.
+                Share your business goal, budget range, and current channels.
+                We’ll send a recommended action plan within 48 hours.
               </p>
 
               <div className="mt-6 space-y-3 text-sm text-zinc-600 dark:text-zinc-300">

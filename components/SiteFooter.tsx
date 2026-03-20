@@ -29,8 +29,9 @@ export function SiteFooter() {
               </span>
             </Link>
             <p className="mt-3 text-sm leading-6 text-(--foreground)/70">
-              Performance-first marketing agency: ads, SEO, landing pages & CRO —
-              with clear reporting and measurable pipeline impact.
+              Digital marketing for real estate & interior design: lead-focused
+              advertising, SEO, conversion-ready websites, and lead tracking —
+              in Noida.
             </p>
           </div>
 
@@ -81,7 +82,7 @@ export function SiteFooter() {
                     +91 9718435589
                   </a>
                 </li>
-                <li>Noida, Uttar Pradesh, India</li>
+                <li>Noida, Uttar Pradesh, India-201301</li>
               </ul>
             </div>
             <div>
@@ -113,7 +114,10 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-10 flex flex-col gap-2 border-t border-black/10 pt-6 text-xs text-(--foreground)/60 dark:border-white/10 sm:flex-row sm:items-center sm:justify-between">
-          <div>© {new Date().getFullYear()} LeadCatch Studio. All rights reserved.</div>
+          <div>
+            © {new Date().getFullYear()} Lead Catch Private Limited. All
+            rights reserved.
+          </div>
           <div>Built with Next.js • Tailwind</div>
         </div>
       </div>
