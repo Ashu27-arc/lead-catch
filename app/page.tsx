@@ -1,65 +1,594 @@
-import Image from "next/image";
+import { Reveal } from "@/components/Reveal";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <main className="bg-white text-black dark:bg-black dark:text-white">
+      <section className="relative overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 opacity-60 [background:radial-gradient(800px_circle_at_20%_20%,color-mix(in_oklab,var(--brand)_35%,transparent),transparent_60%),radial-gradient(800px_circle_at_80%_20%,color-mix(in_oklab,var(--accent)_28%,transparent),transparent_55%),radial-gradient(800px_circle_at_50%_80%,color-mix(in_oklab,var(--brand-2)_28%,transparent),transparent_55%)]" />
+        <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+          <div className="grid items-center gap-10 lg:grid-cols-2">
+            <div>
+              <Reveal>
+                <p className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/70 px-3 py-1 text-xs font-medium text-zinc-700 backdrop-blur dark:border-white/10 dark:bg-black/40 dark:text-zinc-200">
+                  Performance marketing • CRO • Landing pages
+                </p>
+              </Reveal>
+              <Reveal delayMs={80}>
+                <h1 className="mt-5 text-balance text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
+                  A marketing agency that grows{" "}
+                  <span className="underline decoration-(--brand)/60 underline-offset-4">
+                    leads
+                  </span>{" "}
+                  and{" "}
+                  <span className="underline decoration-(--accent)/70 underline-offset-4">
+                    revenue
+                  </span>{" "}
+                  together.
+                </h1>
+              </Reveal>
+              <Reveal delayMs={140}>
+                <p className="mt-5 max-w-xl text-pretty text-base leading-7 text-zinc-600 dark:text-zinc-300">
+                  We build predictable pipeline with Meta Ads, SEO,
+                  high-converting landing pages, and conversion-rate optimization
+                  — backed by clear reporting.
+                </p>
+              </Reveal>
+
+              <Reveal delayMs={200}>
+                <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+                  <a
+                    href="/contact-us"
+                    className="inline-flex h-11 items-center justify-center rounded-full bg-(--brand) px-5 text-sm font-medium text-(--brand-contrast) transition-[transform,filter,background-color] hover:bg-(--brand-2) hover:brightness-105 active:translate-y-px"
+                  >
+                    Free Growth Audit
+                  </a>
+                  <a
+                    href="/projects"
+                    className="inline-flex h-11 items-center justify-center rounded-full border border-black/15 bg-white px-5 text-sm font-medium text-black transition-[transform,background-color] hover:bg-[color-mix(in_oklab,var(--brand)_10%,transparent)] active:translate-y-px dark:border-white/15 dark:bg-black dark:text-white dark:hover:bg-[color-mix(in_oklab,var(--brand)_18%,transparent)]"
+                  >
+                    See projects
+                  </a>
+                </div>
+              </Reveal>
+
+              <div className="mt-10 grid grid-cols-3 gap-4 text-sm">
+                <Reveal delayMs={260}>
+                  <div className="rounded-2xl border border-black/10 bg-white/60 p-4 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+                    <div className="text-2xl font-semibold tracking-tight">
+                      2–6x
+                    </div>
+                    <div className="mt-1 text-zinc-600 dark:text-zinc-400">
+                      ROAS targets
+                    </div>
+                  </div>
+                </Reveal>
+                <Reveal delayMs={320}>
+                  <div className="rounded-2xl border border-black/10 bg-white/60 p-4 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+                    <div className="text-2xl font-semibold tracking-tight">
+                      14d
+                    </div>
+                    <div className="mt-1 text-zinc-600 dark:text-zinc-400">
+                      launch cycles
+                    </div>
+                  </div>
+                </Reveal>
+                <Reveal delayMs={380}>
+                  <div className="rounded-2xl border border-black/10 bg-white/60 p-4 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-md dark:border-white/10 dark:bg-white/5">
+                    <div className="text-2xl font-semibold tracking-tight">
+                      Weekly
+                    </div>
+                    <div className="mt-1 text-zinc-600 dark:text-zinc-400">
+                      reporting
+                    </div>
+                  </div>
+                </Reveal>
+              </div>
+            </div>
+
+            <div className="relative">
+              <Reveal delayMs={220} className="rounded-3xl">
+                <div className="rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5">
+                <div className="flex items-center justify-between">
+                  <div className="text-sm font-semibold">Pipeline Snapshot</div>
+                  <div className="rounded-full border border-black/10 px-3 py-1 text-xs text-zinc-600 dark:border-white/10 dark:text-zinc-400">
+                    Last 30 days
+                  </div>
+                </div>
+                <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                  <div className="rounded-2xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black">
+                    <div className="text-xs text-zinc-500">Leads</div>
+                    <div className="mt-1 text-2xl font-semibold">418</div>
+                    <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-white/10">
+                      <div className="h-full w-[74%] rounded-full bg-(--brand)" />
+                    </div>
+                  </div>
+                  <div className="rounded-2xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black">
+                    <div className="text-xs text-zinc-500">Qualified</div>
+                    <div className="mt-1 text-2xl font-semibold">152</div>
+                    <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-white/10">
+                      <div className="h-full w-[52%] rounded-full bg-(--brand-2)" />
+                    </div>
+                  </div>
+                  <div className="rounded-2xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black">
+                    <div className="text-xs text-zinc-500">Meetings</div>
+                    <div className="mt-1 text-2xl font-semibold">46</div>
+                    <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-white/10">
+                      <div className="h-full w-[38%] rounded-full bg-(--accent)" />
+                    </div>
+                  </div>
+                  <div className="rounded-2xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black">
+                    <div className="text-xs text-zinc-500">Revenue</div>
+                    <div className="mt-1 text-2xl font-semibold">₹18.4L</div>
+                    <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-white/10">
+                      <div className="h-full w-[61%] rounded-full bg-(--accent-2)" />
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-6 rounded-2xl border border-black/10 bg-white p-4 text-sm text-zinc-600 dark:border-white/10 dark:bg-black dark:text-zinc-300">
+                  “We don’t optimize for vanity metrics. We optimize for
+                  pipeline: qualified leads → meetings → revenue.”
+                </div>
+              </div>
+              </Reveal>
+              <div className="pointer-events-none absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-[color-mix(in_oklab,var(--brand)_18%,transparent)] blur-3xl" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-black/10 bg-zinc-50 dark:border-white/10 dark:bg-white/5">
+        <div className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-sm text-zinc-600 dark:text-zinc-300">
+              Trusted by founders & growth teams (sample logos)
+            </p>
+            <div className="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:justify-end">
+              {[
+                "Nimbus",
+                "Brightly",
+                "Northwind",
+                "Aster",
+                "Monolith",
+                "Kite",
+              ].map((name) => (
+                <div
+                  key={name}
+                  className="flex h-10 items-center justify-center rounded-xl border border-black/10 bg-white px-4 text-xs font-semibold text-zinc-700 dark:border-white/10 dark:bg-black dark:text-zinc-200"
+                >
+                  {name}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="services"
+        className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6"
+      >
+        <div className="max-w-2xl">
+          <Reveal>
+            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+              Services
+            </h2>
+          </Reveal>
+          <Reveal delayMs={90}>
+            <p className="mt-4 text-zinc-600 dark:text-zinc-300">
+              Focused scope. Clear execution. Measurable outcomes.
+            </p>
+          </Reveal>
+        </div>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {[
+            {
+              title: "Meta Ads",
+              desc: "Account setup, audience strategy, creatives direction, and weekly optimization for leads/sales.",
+              tag: "Ads",
+            },
+            {
+              title: "SEO",
+              desc: "Technical fixes, on-page improvements, content plan, and compounding rankings.",
+              tag: "Organic",
+            },
+            {
+              title: "Website Development",
+              desc: "Fast marketing websites/landing pages with modern UI and SEO-ready structure.",
+              tag: "Web",
+            },
+            {
+              title: "Mobile App Development",
+              desc: "Android/iOS apps with clean UX, API integration, analytics events, and production-ready builds.",
+              tag: "App",
+              center: true,
+            },
+          ].map((s) => (
+            <Reveal
+              key={s.title}
+              delayMs={s.center ? 180 : 120}
+              className={[
+                s.center
+                  ? "md:col-span-2 md:justify-self-center md:max-w-xl lg:col-span-1 lg:col-start-2 lg:max-w-none"
+                  : "",
+              ].join(" ")}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
+              <div
+                className={[
+                  "group rounded-3xl border border-black/10 bg-white p-6 shadow-sm transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-white/10 dark:bg-white/5",
+                  "hover:[box-shadow:0_18px_60px_-35px_color-mix(in_oklab,var(--brand)_55%,transparent)]",
+                ].join(" ")}
+              >
+                <div className="inline-flex items-center rounded-full border border-black/10 bg-white px-3 py-1 text-xs font-medium text-zinc-700 transition-colors group-hover:border-black/15 dark:border-white/10 dark:bg-black dark:text-zinc-200">
+                  {s.tag}
+                </div>
+                <h3 className="mt-4 text-lg font-semibold tracking-tight">
+                  {s.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-300">
+                  {s.desc}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section
+        id="work"
+        className="border-t border-black/10 bg-zinc-50 dark:border-white/10 dark:bg-white/5"
+      >
+        <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+                Case studies (sample)
+              </h2>
+              <p className="mt-3 max-w-2xl text-zinc-600 dark:text-zinc-300">
+                Results vary by niche and offer — these are sample formats to
+                show how we present work.
+              </p>
+            </div>
             <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="/contact-us"
+              className="inline-flex h-10 items-center justify-center rounded-full border border-black/15 bg-white px-4 text-sm font-medium text-black transition-colors hover:bg-black/5 dark:border-white/15 dark:bg-black dark:text-white dark:hover:bg-white/10"
             >
-              Learning
-            </a>{" "}
-            center.
+              Get your plan →
+            </a>
+          </div>
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+            {[
+              {
+                title: "D2C Skincare — Meta + CRO",
+                bullets: ["CPA down 28%", "CVR up 1.6x", "ROAS stable at scale"],
+              },
+              {
+                title: "B2B SaaS — SEO + LPs",
+                bullets: [
+                  "Top-3 rankings for 14 keywords",
+                  "Demo requests up 2.1x",
+                  "Sales cycle shortened",
+                ],
+              },
+              {
+                title: "Local Services — Google Ads",
+                bullets: ["Lead volume up 3.4x", "CPL down 22%", "Call quality improved"],
+              },
+            ].map((c) => (
+              <div
+                key={c.title}
+                className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-black"
+              >
+                <h3 className="text-lg font-semibold tracking-tight">
+                  {c.title}
+                </h3>
+                <ul className="mt-4 space-y-2 text-sm text-zinc-600 dark:text-zinc-300">
+                  {c.bullets.map((b) => (
+                    <li key={b} className="flex gap-2">
+                      <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-(--accent)" />
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
+        <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+          Clients say it best
+        </h2>
+        <div className="mt-10 grid gap-6 lg:grid-cols-3">
+          {[
+            {
+              quote:
+                "Reporting was crystal clear. Within 2 weeks we saw better lead quality and more booked calls.",
+              name: "Founder, B2B SaaS",
+            },
+            {
+              quote:
+                "The landing page revamp and offer tweaks lifted conversions immediately.",
+              name: "Head of Growth, D2C",
+            },
+            {
+              quote:
+                "They test fast. Creative iterations + audience strategy gave us stable scaling.",
+              name: "Marketing Manager, Services",
+            },
+          ].map((t) => (
+            <figure
+              key={t.name}
+              className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-white/5"
+            >
+              <blockquote className="text-sm leading-6 text-zinc-700 dark:text-zinc-200">
+                “{t.quote}”
+              </blockquote>
+              <figcaption className="mt-4 text-xs font-semibold text-zinc-500 dark:text-zinc-400">
+                {t.name}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      <section
+        id="pricing"
+        className="border-y border-black/10 bg-zinc-50 dark:border-white/10 dark:bg-white/5"
+      >
+        <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+              Simple pricing
+            </h2>
+            <p className="mt-4 text-zinc-600 dark:text-zinc-300">
+              Choose a plan that matches your stage. Custom retainers also
+              available.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+            {[
+              {
+                name: "Starter",
+                price: "₹29k/mo",
+                desc: "For early-stage brands testing channels.",
+                items: ["1 channel focus", "2 LP optimizations/mo", "Weekly report"],
+              },
+              {
+                name: "Growth",
+                price: "₹59k/mo",
+                desc: "For scaling spend & conversion rates.",
+                items: ["2 channels", "4 experiments/mo", "Dashboards + tracking"],
+                highlight: true,
+              },
+              {
+                name: "Scale",
+                price: "Custom",
+                desc: "For multi-product / multi-geo growth.",
+                items: ["Full-funnel", "Creative production", "CRO + SEO + Ads"],
+              },
+            ].map((p) => (
+              <div
+                key={p.name}
+                className={[
+                  "rounded-3xl border p-6 shadow-sm",
+                  p.highlight
+                    ? "border-indigo-500/40 bg-white dark:bg-black"
+                    : "border-black/10 bg-white dark:border-white/10 dark:bg-white/5",
+                ].join(" ")}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <div className="text-sm font-semibold">{p.name}</div>
+                    <div className="mt-2 text-3xl font-semibold tracking-tight">
+                      {p.price}
+                    </div>
+                  </div>
+                  {p.highlight ? (
+                    <span className="rounded-full bg-(--brand) px-3 py-1 text-xs font-semibold text-(--brand-contrast)">
+                      Most popular
+                    </span>
+                  ) : null}
+                </div>
+                <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-300">
+                  {p.desc}
+                </p>
+                <ul className="mt-6 space-y-2 text-sm text-zinc-600 dark:text-zinc-300">
+                  {p.items.map((it) => (
+                    <li key={it} className="flex gap-2">
+                      <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-(--accent)" />
+                      <span>{it}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="/contact-us"
+                  className={[
+                    "mt-7 inline-flex h-10 w-full items-center justify-center rounded-full text-sm font-medium transition-colors",
+                    p.highlight
+                      ? "bg-(--brand) text-(--brand-contrast) hover:bg-(--brand-2)"
+                      : "border border-black/15 bg-white text-black hover:bg-[color-mix(in_oklab,var(--brand)_10%,transparent)] dark:border-white/15 dark:bg-black dark:text-white dark:hover:bg-[color-mix(in_oklab,var(--brand)_18%,transparent)]",
+                  ].join(" ")}
+                >
+                  Talk to us
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="faq"
+        className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6"
+      >
+        <div className="max-w-2xl">
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+            FAQ
+          </h2>
+          <p className="mt-4 text-zinc-600 dark:text-zinc-300">
+            Quick answers. If you have a different question, send us a message.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="mt-10 grid gap-4 md:grid-cols-2">
+          {[
+            {
+              q: "Minimum contract?",
+              a: "Typically 2 months. Month 1 is setup + learning; month 2 is optimization and scaling.",
+            },
+            {
+              q: "Do you build landing pages?",
+              a: "Yes. We ship fast pages with tracking, and we can optimize existing pages too.",
+            },
+            {
+              q: "Can you guarantee results?",
+              a: "We can’t guarantee outcomes, but we guarantee disciplined experiments, transparency, and speed.",
+            },
+            {
+              q: "What do you need from us?",
+              a: "Access to ad accounts/analytics, past performance data, and 1 weekly 30-min sync.",
+            },
+          ].map((f) => (
+            <details
+              key={f.q}
+              className="group rounded-2xl border border-black/10 bg-white p-5 dark:border-white/10 dark:bg-white/5"
+            >
+              <summary className="cursor-pointer list-none font-semibold tracking-tight">
+                <span>{f.q}</span>
+                <span className="float-right text-zinc-400 group-open:rotate-45">
+                  +
+                </span>
+              </summary>
+              <p className="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-300">
+                {f.a}
+              </p>
+            </details>
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section
+        id="contact"
+        className="border-t border-black/10 bg-zinc-50 dark:border-white/10 dark:bg-white/5"
+      >
+        <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
+          <div className="grid gap-10 lg:grid-cols-2">
+            <div>
+              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+                Let’s grow your pipeline
+              </h2>
+              <p className="mt-4 max-w-xl text-zinc-600 dark:text-zinc-300">
+            Share your goal, budget range, and current channels. We’ll send an
+            action plan within 48 hours.
+              </p>
+
+              <div className="mt-6 space-y-3 text-sm text-zinc-600 dark:text-zinc-300">
+                <div>
+                  <span className="font-semibold text-black dark:text-white">
+                    Email:
+                  </span>{" "}
+                  <a
+                    href="mailto:info@leadcatch.in"
+                    className="underline decoration-black/20 underline-offset-4 hover:decoration-black/60 dark:decoration-white/20 dark:hover:decoration-white/60"
+                  >
+                    info@leadcatch.in
+                  </a>
+                </div>
+                <div>
+                  <span className="font-semibold text-black dark:text-white">
+                    Call:
+                  </span>{" "}
+                  <span className="inline-flex flex-wrap gap-x-3 gap-y-1">
+                    <a
+                      href="tel:+919917677017"
+                      className="underline decoration-black/20 underline-offset-4 hover:decoration-black/60 dark:decoration-white/20 dark:hover:decoration-white/60"
+                    >
+                      +91 9917677017
+                    </a>
+                    <a
+                      href="tel:+919718435589"
+                      className="underline decoration-black/20 underline-offset-4 hover:decoration-black/60 dark:decoration-white/20 dark:hover:decoration-white/60"
+                    >
+                      +91 9718435589
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-black">
+              <form className="space-y-4">
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <label className="block">
+                    <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">
+                      Name
+                    </span>
+                    <input
+                      className="mt-2 h-11 w-full rounded-xl border border-black/10 bg-white px-3 text-sm outline-none ring-0 placeholder:text-zinc-400 focus:border-indigo-500/60 dark:border-white/10 dark:bg-black"
+                      placeholder="Your name"
+                      name="name"
+                    />
+                  </label>
+                  <label className="block">
+                    <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">
+                      Email
+                    </span>
+                    <input
+                      className="mt-2 h-11 w-full rounded-xl border border-black/10 bg-white px-3 text-sm outline-none placeholder:text-zinc-400 focus:border-indigo-500/60 dark:border-white/10 dark:bg-black"
+                      placeholder="you@company.com"
+                      type="email"
+                      name="email"
+                    />
+                  </label>
+                </div>
+
+                <label className="block">
+                  <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">
+                    Website / Product
+                  </span>
+                  <input
+                    className="mt-2 h-11 w-full rounded-xl border border-black/10 bg-white px-3 text-sm outline-none placeholder:text-zinc-400 focus:border-indigo-500/60 dark:border-white/10 dark:bg-black"
+                    placeholder="https://"
+                    name="website"
+                  />
+                </label>
+
+                <label className="block">
+                  <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">
+                    What do you need help with?
+                  </span>
+                  <textarea
+                    className="mt-2 min-h-28 w-full rounded-xl border border-black/10 bg-white px-3 py-2 text-sm outline-none placeholder:text-zinc-400 focus:border-indigo-500/60 dark:border-white/10 dark:bg-black"
+                    placeholder="Ads / SEO / landing page / tracking / lead gen…"
+                    name="message"
+                  />
+                </label>
+
+                <button
+                  type="button"
+                  className="inline-flex h-11 w-full items-center justify-center rounded-full bg-(--brand) px-5 text-sm font-medium text-(--brand-contrast) transition-colors hover:bg-(--brand-2)"
+                >
+                  Send message
+                </button>
+                <p className="text-xs text-zinc-500">
+                  This demo form doesn’t submit yet. Use email/phone above or
+                  visit the dedicated contact page.
+                </p>
+                <a
+                  href="/contact-us"
+                  className="inline-flex text-xs font-semibold underline decoration-black/20 underline-offset-4 hover:decoration-black/60 dark:decoration-white/20 dark:hover:decoration-white/60"
+                >
+                  Open contact page →
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
