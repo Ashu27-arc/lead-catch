@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "LeadCatch Studio — Marketing Agency",
+  title: "LeadCatch — Marketing Agency",
   description:
     "Performance marketing agency for lead generation: ads, SEO, landing pages & CRO with clear reporting.",
   metadataBase: new URL("https://example.com"),
