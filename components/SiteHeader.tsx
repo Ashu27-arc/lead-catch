@@ -88,7 +88,8 @@ export function SiteHeader() {
           href="/"
           className="group inline-flex items-center gap-2 font-semibold tracking-tight"
           aria-label="Home"
-          onClick={(e) => handleNavSwitch(e, "/")}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-(--background)/80 ring-1 ring-black/10 backdrop-blur dark:ring-white/10">
             <Image
@@ -111,7 +112,8 @@ export function SiteHeader() {
               key={item.href}
               href={item.href}
               className="transition-colors hover:text-(--brand)"
-              onClick={(e) => handleNavSwitch(e, item.href)}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {item.label}
             </Link>
