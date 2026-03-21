@@ -11,7 +11,7 @@ const links = [
 export function SiteFooter() {
   return (
     <footer className="border-t border-black/10 bg-background dark:border-white/10">
-      <div className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6">
+      <div className="mx-auto w-full max-w-6xl px-3 py-10 sm:px-5">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div className="max-w-md">
             <Link href="/" className="inline-flex items-center gap-2">

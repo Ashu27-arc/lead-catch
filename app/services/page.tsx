@@ -34,12 +34,12 @@ const serviceGroups = [
 
 export default function ServicesPage() {
   return (
-    <main className="bg-white text-black dark:bg-black dark:text-white">
-      <section className="relative overflow-hidden border-b border-black/10 dark:border-white/10">
+    <main className="lc-page bg-white text-black dark:bg-black dark:text-white">
+      <section className="relative overflow-hidden border-b border-black/10 bg-[color-mix(in_oklab,var(--brand)_8%,white)] dark:border-white/10 dark:bg-[color-mix(in_oklab,var(--brand)_12%,black)]">
         <div className="pointer-events-none absolute inset-0 opacity-60 [background:radial-gradient(800px_circle_at_20%_20%,color-mix(in_oklab,var(--brand)_35%,transparent),transparent_60%),radial-gradient(800px_circle_at_80%_20%,color-mix(in_oklab,var(--accent)_28%,transparent),transparent_55%),radial-gradient(800px_circle_at_50%_80%,color-mix(in_oklab,var(--brand-2)_28%,transparent),transparent_55%)]" />
-        <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5 sm:py-20">
           <Reveal>
-            <p className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/70 px-3 py-1 text-xs font-medium text-zinc-700 backdrop-blur dark:border-white/10 dark:bg-black/40 dark:text-zinc-200">
+            <p className="inline-flex items-center gap-2 rounded-full border border-(--brand)/30 bg-white/80 px-3 py-1 text-xs font-medium text-zinc-800 backdrop-blur dark:border-(--brand)/35 dark:bg-black/35 dark:text-zinc-100">
               Services for real estate & interiors
             </p>
           </Reveal>
@@ -71,7 +71,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
+      <section className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5">
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -91,9 +91,9 @@ export default function ServicesPage() {
             ].map((x) => (
               <div
                 key={x.k}
-                className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-white/5"
+                className="rounded-2xl border border-(--brand)/20 bg-[color-mix(in_oklab,var(--brand)_8%,white)] p-6 shadow-sm dark:border-(--brand)/25 dark:bg-[color-mix(in_oklab,var(--brand)_12%,black)]"
               >
-                <div className="text-xs font-semibold text-zinc-500">{x.k}</div>
+                <div className="inline-flex rounded-full border border-(--brand)/25 bg-white px-2 py-0.5 text-xs font-semibold text-zinc-700 dark:bg-black dark:text-zinc-200">{x.k}</div>
                 <div className="mt-2 text-lg font-semibold tracking-tight">
                   {x.v}
                 </div>
@@ -103,8 +103,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="border-y border-black/10 bg-zinc-50 dark:border-white/10 dark:bg-white/5">
-        <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
+      <section className="border-y border-black/10 bg-zinc-50/80 dark:border-white/10 dark:bg-white/5">
+        <div className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5">
           <div className="grid gap-12 lg:grid-cols-2">
             {serviceGroups.map((g) => (
               <div key={g.title}>
@@ -121,7 +121,7 @@ export default function ServicesPage() {
                 <div className="mt-8 grid gap-4 sm:grid-cols-2">
                   {g.items.map((s) => (
                     <Reveal key={s.title} delayMs={120}>
-                      <div className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-white/10 dark:bg-black">
+                      <div className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:border-(--brand)/35 hover:shadow-lg dark:border-white/10 dark:bg-black">
                         <h3 className="text-lg font-semibold tracking-tight">
                           {s.title}
                         </h3>

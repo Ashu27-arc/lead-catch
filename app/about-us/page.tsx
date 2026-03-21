@@ -3,12 +3,12 @@ import { Reveal } from "@/components/Reveal";
 
 export default function AboutUsPage() {
   return (
-    <main className="bg-white text-black dark:bg-black dark:text-white">
-      <section className="relative overflow-hidden border-b border-black/10 dark:border-white/10">
-        <div className="pointer-events-none absolute inset-0 opacity-60 [background:radial-gradient(800px_circle_at_20%_20%,color-mix(in_oklab,var(--brand)_35%,transparent),transparent_60%),radial-gradient(800px_circle_at_80%_20%,color-mix(in_oklab,var(--accent)_28%,transparent),transparent_55%),radial-gradient(800px_circle_at_50%_80%,color-mix(in_oklab,var(--brand-2)_28%,transparent),transparent_55%)]" />
-        <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+    <main className="lc-page bg-white text-black dark:bg-black dark:text-white">
+      <section className="relative overflow-hidden border-b border-black/10 bg-[color-mix(in_oklab,var(--accent)_10%,white)] dark:border-white/10 dark:bg-[color-mix(in_oklab,var(--accent)_14%,black)]">
+        <div className="pointer-events-none absolute inset-0 opacity-60 [background:radial-gradient(900px_circle_at_15%_15%,color-mix(in_oklab,var(--accent)_34%,transparent),transparent_58%),radial-gradient(900px_circle_at_80%_10%,color-mix(in_oklab,var(--accent-2)_30%,transparent),transparent_56%),radial-gradient(800px_circle_at_50%_85%,color-mix(in_oklab,var(--brand-2)_18%,transparent),transparent_60%)]" />
+        <div className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5 sm:py-20">
           <Reveal>
-            <p className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/70 px-3 py-1 text-xs font-medium text-zinc-700 backdrop-blur dark:border-white/10 dark:bg-black/40 dark:text-zinc-200">
+            <p className="inline-flex items-center gap-2 rounded-full border border-(--accent)/30 bg-white/75 px-3 py-1 text-xs font-medium text-zinc-800 backdrop-blur dark:border-(--accent)/35 dark:bg-black/35 dark:text-zinc-100">
               Real estate & interior marketing, done end-to-end
             </p>
           </Reveal>
@@ -44,7 +44,7 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
+      <section className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5">
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
             <Reveal>
@@ -81,7 +81,7 @@ export default function AboutUsPage() {
               },
             ].map((v) => (
               <Reveal key={v.title} delayMs={120}>
-                <div className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-white/10 dark:bg-white/5">
+                <div className="rounded-3xl border border-(--accent)/20 bg-[color-mix(in_oklab,var(--accent)_8%,white)] p-6 shadow-sm transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:border-(--accent)/40 hover:shadow-lg dark:border-(--accent)/25 dark:bg-[color-mix(in_oklab,var(--accent)_12%,black)]">
                   <h3 className="text-lg font-semibold tracking-tight">
                     {v.title}
                   </h3>
@@ -95,8 +95,8 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <section className="border-y border-black/10 bg-zinc-50 dark:border-white/10 dark:bg-white/5">
-        <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
+      <section className="border-y border-black/10 bg-[color-mix(in_oklab,var(--accent)_8%,white)] dark:border-white/10 dark:bg-[color-mix(in_oklab,var(--accent)_12%,black)]">
+        <div className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5">
           <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
             Our process
           </h2>
@@ -125,9 +125,9 @@ export default function AboutUsPage() {
             ].map((p) => (
               <div
                 key={p.step}
-                className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-black"
+                className="rounded-3xl border border-(--accent)/20 bg-white/90 p-6 shadow-sm dark:border-(--accent)/25 dark:bg-black/70"
               >
-                <div className="text-xs font-semibold text-zinc-500">
+                <div className="inline-flex rounded-full border border-(--accent)/25 bg-[color-mix(in_oklab,var(--accent)_12%,white)] px-2 py-0.5 text-xs font-semibold text-zinc-700 dark:bg-[color-mix(in_oklab,var(--accent)_14%,black)] dark:text-zinc-200">
                   {p.step}
                 </div>
                 <div className="mt-2 text-lg font-semibold tracking-tight">

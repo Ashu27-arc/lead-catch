@@ -2,10 +2,10 @@ import { Reveal } from "@/components/Reveal";
 
 export default function Home() {
   return (
-    <main className="bg-white text-black dark:bg-black dark:text-white">
+    <main className="lc-page bg-white text-black dark:bg-black dark:text-white">
       <section className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0 opacity-60 [background:radial-gradient(800px_circle_at_20%_20%,color-mix(in_oklab,var(--brand)_35%,transparent),transparent_60%),radial-gradient(800px_circle_at_80%_20%,color-mix(in_oklab,var(--accent)_28%,transparent),transparent_55%),radial-gradient(800px_circle_at_50%_80%,color-mix(in_oklab,var(--brand-2)_28%,transparent),transparent_55%)]" />
-        <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5 sm:py-20">
           <div className="grid items-center gap-10 lg:grid-cols-2">
             <div>
               <Reveal>
@@ -97,36 +97,36 @@ export default function Home() {
                 <div className="mt-6 grid gap-4 sm:grid-cols-2">
                   <div className="rounded-2xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black">
                     <div className="text-xs text-zinc-500">Leads</div>
-                      <div className="mt-1 text-2xl font-semibold">—</div>
+                    <div className="mt-1 text-2xl font-semibold">286</div>
                     <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-white/10">
-                        <div className="h-full w-[40%] rounded-full bg-(--brand)" />
+                      <div className="h-full w-full rounded-full bg-(--brand)" />
                     </div>
                   </div>
                   <div className="rounded-2xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black">
                     <div className="text-xs text-zinc-500">Qualified</div>
-                      <div className="mt-1 text-2xl font-semibold">—</div>
+                    <div className="mt-1 text-2xl font-semibold">124</div>
                     <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-white/10">
-                        <div className="h-full w-[30%] rounded-full bg-(--brand-2)" />
+                      <div className="h-full w-[43%] rounded-full bg-(--brand-2)" />
                     </div>
                   </div>
                   <div className="rounded-2xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black">
                     <div className="text-xs text-zinc-500">Meetings</div>
-                      <div className="mt-1 text-2xl font-semibold">—</div>
+                    <div className="mt-1 text-2xl font-semibold">58</div>
                     <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-white/10">
-                        <div className="h-full w-[18%] rounded-full bg-(--accent)" />
+                      <div className="h-full w-[20%] rounded-full bg-(--accent)" />
                     </div>
                   </div>
                   <div className="rounded-2xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black">
                     <div className="text-xs text-zinc-500">Revenue</div>
-                      <div className="mt-1 text-2xl font-semibold">—</div>
+                    <div className="mt-1 text-2xl font-semibold">Rs 24L</div>
                     <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-white/10">
-                        <div className="h-full w-[25%] rounded-full bg-(--accent-2)" />
+                      <div className="h-full w-[64%] rounded-full bg-(--accent-2)" />
                     </div>
                   </div>
                 </div>
                 <div className="mt-6 rounded-2xl border border-black/10 bg-white p-4 text-sm leading-6 text-zinc-600 dark:border-white/10 dark:bg-black dark:text-zinc-300">
-                    “We optimize for pipeline quality: inquiries → qualified leads →
-                    booked site visits → revenue.”
+                  “Illustrative 30-day snapshot: optimized for pipeline quality
+                  from inquiries to qualified meetings and revenue.”
                 </div>
               </div>
               </Reveal>
@@ -137,7 +137,7 @@ export default function Home() {
       </section>
 
       <section className="border-y border-black/10 bg-zinc-50 dark:border-white/10 dark:bg-white/5">
-        <div className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6">
+        <div className="mx-auto w-full max-w-6xl px-3 py-10 sm:px-5">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-sm text-zinc-600 dark:text-zinc-300">
               Trusted by real estate & interior teams in Noida
@@ -165,7 +165,7 @@ export default function Home() {
 
       <section
         id="services"
-        className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6"
+        className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5"
       >
         <div className="max-w-2xl">
           <Reveal>
@@ -238,7 +238,7 @@ export default function Home() {
         id="work"
         className="border-t border-black/10 bg-zinc-50 dark:border-white/10 dark:bg-white/5"
       >
-        <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
+        <div className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -293,7 +293,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
+      <section className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5">
         <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
           Clients say it best
         </h2>
@@ -334,7 +334,7 @@ export default function Home() {
         id="pricing"
         className="border-y border-black/10 bg-zinc-50 dark:border-white/10 dark:bg-white/5"
       >
-        <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
+        <div className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
               Simple pricing
@@ -419,7 +419,7 @@ export default function Home() {
 
       <section
         id="faq"
-        className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6"
+        className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5"
       >
         <div className="max-w-2xl">
           <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -471,7 +471,7 @@ export default function Home() {
         id="contact"
         className="border-t border-black/10 bg-zinc-50 dark:border-white/10 dark:bg-white/5"
       >
-        <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
+        <div className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5">
           <div className="grid gap-10 lg:grid-cols-2">
             <div>
               <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">

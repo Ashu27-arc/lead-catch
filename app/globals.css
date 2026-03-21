@@ -32,8 +32,10 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
 }
 
 img,
@@ -46,6 +48,28 @@ svg {
 
 ::selection {
   background: color-mix(in oklab, var(--brand) 35%, transparent);
+}
+
+a,
+button {
+  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease,
+    transform 180ms ease, box-shadow 180ms ease, opacity 180ms ease;
+}
+
+/* Site-wide modern surface treatment without relying on gradients. */
+.lc-page {
+  background-image:
+    radial-gradient(circle at 1px 1px, color-mix(in oklab, var(--foreground) 10%, transparent) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+.lc-page :where(article, figure, details, form, .lc-surface) {
+  border-color: color-mix(in oklab, var(--foreground) 12%, transparent);
+  box-shadow: 0 14px 38px -26px color-mix(in oklab, var(--foreground) 45%, transparent);
+}
+
+.lc-page :where(article, figure, details):hover {
+  box-shadow: 0 20px 48px -28px color-mix(in oklab, var(--brand) 45%, transparent);
 }
 
 @media (prefers-reduced-motion: reduce) {

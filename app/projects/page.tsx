@@ -30,10 +30,10 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <main className="bg-white text-black dark:bg-black dark:text-white">
+    <main className="lc-page bg-white text-black dark:bg-black dark:text-white">
       <section className="relative overflow-hidden border-b border-black/10 dark:border-white/10">
         <div className="pointer-events-none absolute inset-0 opacity-60 [background:radial-gradient(800px_circle_at_20%_20%,color-mix(in_oklab,var(--brand)_35%,transparent),transparent_60%),radial-gradient(800px_circle_at_80%_20%,color-mix(in_oklab,var(--accent)_28%,transparent),transparent_55%),radial-gradient(800px_circle_at_50%_80%,color-mix(in_oklab,var(--brand-2)_28%,transparent),transparent_55%)]" />
-        <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5 sm:py-20">
           <Reveal>
             <p className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/70 px-3 py-1 text-xs font-medium text-zinc-700 backdrop-blur dark:border-white/10 dark:bg-black/40 dark:text-zinc-200">
               Results & project formats
@@ -69,7 +69,7 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
+      <section className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5">
         <div className="grid gap-6 lg:grid-cols-2">
           {projects.map((p) => (
             <Reveal key={p.title}>
@@ -111,7 +111,7 @@ export default function ProjectsPage() {
       </section>
 
       <section className="border-t border-black/10 bg-zinc-50 dark:border-white/10 dark:bg-white/5">
-        <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
+        <div className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5">
           <div className="rounded-3xl border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-black">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div>

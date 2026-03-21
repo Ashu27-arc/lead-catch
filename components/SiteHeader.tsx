@@ -25,22 +25,12 @@ export function SiteHeader() {
     if (typeof window === "undefined") return;
     if (!isMenuOpen) return;
 
-    const prevOverflow = document.body.style.overflow;
-    const prevPaddingRight = document.body.style.paddingRight;
-    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-    document.body.style.overflow = "hidden";
-    if (scrollbarWidth > 0) {
-      document.body.style.paddingRight = `${scrollbarWidth}px`;
-    }
-
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") setIsMenuOpen(false);
     };
 
     window.addEventListener("keydown", onKeyDown);
     return () => {
-      document.body.style.overflow = prevOverflow;
-      document.body.style.paddingRight = prevPaddingRight;
       window.removeEventListener("keydown", onKeyDown);
     };
   }, [isMenuOpen]);
@@ -88,11 +78,11 @@ export function SiteHeader() {
         </div>
       ) : null}
 
-      <header className="sticky top-0 z-50 border-b border-black/10 bg-background/70 backdrop-blur dark:border-white/10">
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+      <header className="sticky top-0 z-50 border-b border-black/10 bg-background/72 backdrop-blur-xl dark:border-white/10">
+        <div className="mx-auto mt-2 flex w-full max-w-6xl items-center justify-between gap-4 rounded-2xl border border-black/10 bg-background/80 px-3 py-3 shadow-[0_10px_32px_-24px_rgba(0,0,0,0.6)] backdrop-blur-xl sm:px-5 dark:border-white/10">
         <Link
           href="/"
-          className="group inline-flex items-center gap-2 font-semibold tracking-tight"
+          className="group inline-flex min-w-0 flex-1 items-center gap-2 font-semibold tracking-tight"
           aria-label="Home"
           target="_blank"
           rel="noopener noreferrer"
@@ -131,7 +121,7 @@ export function SiteHeader() {
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={isMenuOpen}
           className={[
-            "inline-flex h-10 w-10 items-center justify-center rounded-xl border text-foreground transition-colors md:hidden",
+            "ml-3 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border text-foreground transition-colors md:hidden",
             isMenuOpen
               ? "border-(--brand)/40 bg-[color-mix(in_oklab,var(--brand)_22%,transparent)]"
               : "border-black/10 bg-[color-mix(in_oklab,var(--brand)_12%,transparent)]",
@@ -172,16 +162,18 @@ export function SiteHeader() {
         </div>
       </div>
 
+      </header>
+
       {isMenuOpen ? (
         <div className="fixed inset-0 z-55 md:hidden" role="dialog" aria-modal="true">
           <button
             type="button"
-            className="absolute inset-0 bg-background/60 backdrop-blur-sm"
+            className="absolute inset-0 bg-black/45 backdrop-blur-sm"
             aria-label="Close menu overlay"
             onClick={() => setIsMenuOpen(false)}
           />
 
-          <div className="absolute right-0 top-0 h-full w-[85%] max-w-sm border-l border-black/10 bg-background/95 backdrop-blur p-4">
+          <div className="absolute left-0 top-0 h-full w-[85%] max-w-sm border-r border-(--brand)/30 bg-[color-mix(in_oklab,var(--brand)_18%,var(--background))] backdrop-blur p-4">
             <div className="flex items-center justify-between gap-3">
               <Link
                 href="/"
@@ -222,8 +214,10 @@ export function SiteHeader() {
                   key={item.href}
                   href={item.href}
                   className={[
-                    "rounded-xl border border-black/10 bg-white/70 px-4 py-3 font-medium text-foreground",
-                    item.href === pathname ? "ring-1 ring-(--brand)" : "",
+                    "rounded-xl border border-black/10 bg-white/70 px-4 py-3 font-medium text-foreground transition-[background-color,border-color,color,transform,box-shadow] hover:-translate-y-px hover:border-(--brand)/45 hover:bg-[color-mix(in_oklab,var(--brand)_24%,white)] hover:text-(--brand-contrast) hover:shadow-sm active:translate-y-0",
+                    item.href === pathname
+                      ? "border-(--brand)/55 bg-[color-mix(in_oklab,var(--brand)_30%,white)] text-(--brand-contrast) ring-1 ring-(--brand)/30"
+                      : "",
                   ].join(" ")}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -249,7 +243,6 @@ export function SiteHeader() {
           </div>
         </div>
       ) : null}
-      </header>
     </>
   );
 }
