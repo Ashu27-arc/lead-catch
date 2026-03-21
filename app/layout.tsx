@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   description:
     "Lead Catch helps real estate & interior design businesses grow with digital advertising, SEO, conversion-focused websites, and lead tracking in Noida.",
   metadataBase: new URL("https://www.leadcatch.in/"),
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
