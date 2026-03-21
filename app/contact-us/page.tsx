@@ -48,7 +48,7 @@ export default function ContactUsPage() {
                 <div className="text-xs font-semibold text-zinc-500">Email</div>
                 <a
                   href="mailto:info@leadcatch.in"
-                  className="mt-2 inline-flex underline decoration-black/20 underline-offset-4 hover:decoration-black/60 dark:decoration-white/20 dark:hover:decoration-white/60"
+                  className="mt-2 inline-flex break-all underline decoration-black/20 underline-offset-4 hover:decoration-black/60 dark:decoration-white/20 dark:hover:decoration-white/60"
                 >
                   info@leadcatch.in
                 </a>

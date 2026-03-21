@@ -51,7 +51,7 @@ export default function Home() {
                 </div>
               </Reveal>
 
-              <div className="mt-10 grid grid-cols-3 gap-4 text-sm">
+              <div className="mt-10 grid grid-cols-1 gap-4 text-sm sm:grid-cols-3">
                 <Reveal delayMs={260}>
                   <div className="rounded-2xl border border-black/10 bg-white/60 p-4 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-md dark:border-white/10 dark:bg-white/5">
                     <div className="text-2xl font-semibold tracking-tight">
@@ -124,7 +124,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="mt-6 rounded-2xl border border-black/10 bg-white p-4 text-sm text-zinc-600 dark:border-white/10 dark:bg-black dark:text-zinc-300">
+                <div className="mt-6 rounded-2xl border border-black/10 bg-white p-4 text-sm leading-6 text-zinc-600 dark:border-white/10 dark:bg-black dark:text-zinc-300">
                     “We optimize for pipeline quality: inquiries → qualified leads →
                     booked site visits → revenue.”
                 </div>
@@ -251,7 +251,7 @@ export default function Home() {
             </div>
             <a
               href="/contact-us"
-              className="inline-flex h-10 items-center justify-center rounded-full border border-black/15 bg-white px-4 text-sm font-medium text-black transition-colors hover:bg-black/5 dark:border-white/15 dark:bg-black dark:text-white dark:hover:bg-white/10"
+              className="inline-flex h-10 w-full items-center justify-center rounded-full border border-black/15 bg-white px-4 text-sm font-medium text-black transition-colors hover:bg-black/5 dark:border-white/15 dark:bg-black dark:text-white dark:hover:bg-white/10 sm:w-auto"
             >
               Get your plan →
             </a>
@@ -376,7 +376,7 @@ export default function Home() {
                     : "border-black/10 bg-white dark:border-white/10 dark:bg-white/5",
                 ].join(" ")}
               >
-                <div className="flex items-start justify-between gap-4">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                   <div>
                     <div className="text-sm font-semibold">{p.name}</div>
                     <div className="mt-2 text-3xl font-semibold tracking-tight">
@@ -384,7 +384,7 @@ export default function Home() {
                     </div>
                   </div>
                   {p.highlight ? (
-                    <span className="rounded-full bg-(--brand) px-3 py-1 text-xs font-semibold text-(--brand-contrast)">
+                    <span className="inline-flex w-fit rounded-full bg-(--brand) px-3 py-1 text-xs font-semibold text-(--brand-contrast)">
                       Most popular
                     </span>
                   ) : null}
@@ -453,9 +453,9 @@ export default function Home() {
               key={f.q}
               className="group rounded-2xl border border-black/10 bg-white p-5 dark:border-white/10 dark:bg-white/5"
             >
-              <summary className="cursor-pointer list-none font-semibold tracking-tight">
-                <span>{f.q}</span>
-                <span className="float-right text-zinc-400 group-open:rotate-45">
+              <summary className="flex cursor-pointer list-none items-start justify-between gap-3 font-semibold tracking-tight">
+                <span className="min-w-0">{f.q}</span>
+                <span className="shrink-0 text-zinc-400 transition-transform group-open:rotate-45">
                   +
                 </span>
               </summary>

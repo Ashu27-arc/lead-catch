@@ -15,7 +15,7 @@ export function SiteFooter() {
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div className="max-w-md">
             <Link href="/" className="inline-flex items-center gap-2">
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-(--background)/80 ring-1 ring-black/10 backdrop-blur dark:ring-white/10">
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-background/80 ring-1 ring-black/10 backdrop-blur dark:ring-white/10">
                 <Image
                   src="/logo.png"
                   alt="LeadCatch logo"
@@ -35,7 +35,7 @@ export function SiteFooter() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
             <div>
               <div className="text-sm font-semibold text-foreground">
                 Explore
@@ -61,7 +61,7 @@ export function SiteFooter() {
                 <li>
                   <a
                     href="mailto:info@leadcatch.in"
-                    className="transition-colors hover:text-(--brand)"
+                    className="break-all transition-colors hover:text-(--brand)"
                   >
                     info@leadcatch.in
                   </a>

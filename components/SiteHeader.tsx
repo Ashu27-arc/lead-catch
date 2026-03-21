@@ -192,6 +192,17 @@ export function SiteHeader() {
                 </span>
                 <span className="text-base text-foreground">LeadCatch</span>
               </Link>
+              <button
+                type="button"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-black/10 bg-background/80 text-foreground transition-colors hover:bg-black/5 dark:hover:bg-white/10"
+                aria-label="Close menu"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <span className="sr-only">Close menu</span>
+                <span aria-hidden="true" className="text-lg leading-none">
+                  ×
+                </span>
+              </button>
             </div>
 
             <nav className="mt-6 flex flex-col gap-4 text-sm">
