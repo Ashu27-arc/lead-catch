@@ -14,6 +14,41 @@ const navItems = [
   { href: "/contact-us", label: "Contact" },
 ] as const;
 
+const contactDetails = {
+  email: "info@leadcatch.in",
+  phone: "+91 9917677017",
+};
+
+const socialLinks = [
+  {
+    href: "https://www.facebook.com/",
+    label: "Facebook",
+    icon: (
+      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4 fill-current">
+        <path d="M13.5 8H16V5h-2.5C10.46 5 9 6.79 9 9.57V12H7v3h2v4h3v-4h2.3l.7-3H12V9.8c0-1.1.29-1.8 1.5-1.8Z" />
+      </svg>
+    ),
+  },
+  {
+    href: "https://www.instagram.com/",
+    label: "Instagram",
+    icon: (
+      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4 fill-current">
+        <path d="M7.75 3h8.5A4.75 4.75 0 0 1 21 7.75v8.5A4.75 4.75 0 0 1 16.25 21h-8.5A4.75 4.75 0 0 1 3 16.25v-8.5A4.75 4.75 0 0 1 7.75 3Zm0 1.8A2.95 2.95 0 0 0 4.8 7.75v8.5a2.95 2.95 0 0 0 2.95 2.95h8.5a2.95 2.95 0 0 0 2.95-2.95v-8.5a2.95 2.95 0 0 0-2.95-2.95h-8.5Zm8.95 1.35a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3ZM12 7.9A4.1 4.1 0 1 1 7.9 12 4.1 4.1 0 0 1 12 7.9Zm0 1.8A2.3 2.3 0 1 0 14.3 12 2.3 2.3 0 0 0 12 9.7Z" />
+      </svg>
+    ),
+  },
+  {
+    href: "https://www.linkedin.com/",
+    label: "LinkedIn",
+    icon: (
+      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4 fill-current">
+        <path d="M6.2 8.2a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6ZM4.7 9.7h3v9.6h-3V9.7Zm5 0h2.9V11h.04c.4-.76 1.4-1.56 2.9-1.56 3.1 0 3.7 2 3.7 4.7v5.2h-3v-4.6c0-1.1-.02-2.5-1.56-2.5-1.56 0-1.8 1.2-1.8 2.4v4.7h-3V9.7Z" />
+      </svg>
+    ),
+  },
+] as const;
+
 export function SiteHeader() {
   const router = useRouter();
   const pathname = usePathname();
@@ -79,6 +114,47 @@ export function SiteHeader() {
       ) : null}
 
       <header className="sticky top-0 z-50 border-b border-black/10 bg-background/72 backdrop-blur-xl dark:border-white/10">
+        <div className="border-b border-black/10 bg-[color-mix(in_oklab,var(--brand)_14%,var(--background))] px-3 py-2 text-xs text-foreground/85 dark:border-white/10 sm:px-5">
+          <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-2 sm:gap-3">
+            <div className="flex min-w-0 flex-wrap items-center gap-x-4 gap-y-1">
+              <a
+                href={`mailto:${contactDetails.email}`}
+                className="inline-flex items-center gap-1.5 transition-colors hover:text-(--brand)"
+                aria-label={`Email ${contactDetails.email}`}
+              >
+                <span className="text-sm leading-none" aria-hidden="true">
+                  @
+                </span>
+                <span className="truncate">{contactDetails.email}</span>
+              </a>
+              <a
+                href={`tel:${contactDetails.phone.replace(/\s+/g, "")}`}
+                className="inline-flex items-center gap-1.5 transition-colors hover:text-(--brand)"
+                aria-label={`Call ${contactDetails.phone}`}
+              >
+                <span className="text-sm leading-none" aria-hidden="true">
+                  &#9742;
+                </span>
+                <span>{contactDetails.phone}</span>
+              </a>
+            </div>
+
+            <div className="flex items-center gap-1">
+              {socialLinks.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  aria-label={item.label}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-black/10 bg-background/75 text-foreground/80 transition-colors hover:border-(--brand)/45 hover:text-(--brand) dark:border-white/10"
+                >
+                  {item.icon}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
         <div className="mx-auto mt-2 flex w-full max-w-6xl items-center justify-between gap-4 rounded-2xl border border-black/10 bg-background/80 px-3 py-3 shadow-[0_10px_32px_-24px_rgba(0,0,0,0.6)] backdrop-blur-xl sm:px-5 dark:border-white/10">
         <Link
           href="/"
