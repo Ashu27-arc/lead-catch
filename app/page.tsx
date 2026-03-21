@@ -163,6 +163,63 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="about" className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5">
+        <div className="grid items-start gap-8 lg:grid-cols-2">
+          <div>
+            <Reveal>
+              <p className="inline-flex items-center rounded-full border border-black/10 bg-white px-3 py-1 text-xs font-medium text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-200">
+                About Us
+              </p>
+            </Reveal>
+            <Reveal delayMs={80}>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+                We build predictable growth for real estate and interior brands.
+              </h2>
+            </Reveal>
+            <Reveal delayMs={140}>
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-zinc-600 dark:text-zinc-300 sm:text-base">
+                Lead Catch is a Noida-based digital growth partner focused on real
+                estate, interiors, and architecture businesses. We combine paid ads,
+                SEO, conversion-first websites, and clean lead tracking so your team
+                gets better inquiries and clearer pipeline visibility.
+              </p>
+            </Reveal>
+            <Reveal delayMs={200}>
+              <p className="mt-3 max-w-2xl text-sm leading-7 text-zinc-600 dark:text-zinc-300 sm:text-base">
+                Our approach is practical: understand your audience, create offers
+                that convert, optimize every step from click to call, and share
+                reporting your team can actually act on.
+              </p>
+            </Reveal>
+          </div>
+
+          <Reveal delayMs={160}>
+            <div className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-white/5">
+              <h3 className="text-lg font-semibold tracking-tight">Why teams choose us</h3>
+              <ul className="mt-5 space-y-3 text-sm text-zinc-600 dark:text-zinc-300">
+                {[
+                  "Niche-first strategy for real estate and interior demand generation",
+                  "Fast execution loops across creatives, landing pages, and forms",
+                  "Transparent weekly reporting with lead quality insights",
+                  "Long-term SEO foundation plus short-term lead momentum",
+                ].map((point) => (
+                  <li key={point} className="flex gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-(--accent)" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="/about-us"
+                className="mt-6 inline-flex h-10 items-center justify-center rounded-full border border-black/15 bg-white px-4 text-sm font-medium text-black transition-colors hover:bg-[color-mix(in_oklab,var(--brand)_10%,transparent)] dark:border-white/15 dark:bg-black dark:text-white dark:hover:bg-[color-mix(in_oklab,var(--brand)_18%,transparent)]"
+              >
+                Learn more about us
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       <section
         id="services"
         className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5"
