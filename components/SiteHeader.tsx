@@ -8,10 +8,10 @@ import { useEffect, useState } from "react";
 import { FreeAuditModal } from "@/components/FreeAuditModal";
 
 const navItems = [
-  { href: "/about-us", label: "About" },
+  { href: "/about-us", label: "About Us" },
   { href: "/services", label: "Services" },
   { href: "/projects", label: "Projects" },
-  { href: "/contact-us", label: "Contact" },
+  { href: "/contact-us", label: "Contact Us" },
 ] as const;
 
 const contactDetails = {
@@ -233,7 +233,7 @@ export function SiteHeader() {
             className="inline-flex h-10 items-center justify-center rounded-full bg-linear-to-r from-(--accent) to-(--accent-2) px-4 text-sm font-semibold text-(--brand-contrast) ring-1 ring-black/10 transition-[filter,transform] hover:brightness-105 active:translate-y-px dark:ring-white/10"
             onClick={openAuditModal}
           >
-            Get a Free Audit
+            Get Your Free Consultation
           </button>
         </div>
       </div>
@@ -310,7 +310,7 @@ export function SiteHeader() {
                 className="inline-flex h-11 w-full items-center justify-center rounded-full bg-linear-to-r from-(--accent) to-(--accent-2) px-5 text-sm font-semibold text-(--brand-contrast) ring-1 ring-black/10 transition-[filter,transform] hover:brightness-105 active:translate-y-px dark:ring-white/10"
                 onClick={openAuditModal}
               >
-                Get a Free Audit
+                Get Your Free Consultation
               </button>
               <div className="mt-3 text-xs text-(--foreground)/60">
                 Tip: Press <span className="font-semibold">Esc</span> to close.

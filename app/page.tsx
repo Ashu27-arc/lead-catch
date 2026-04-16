@@ -10,27 +10,24 @@ export default function Home() {
             <div>
               <Reveal>
                 <p className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/70 px-3 py-1 text-xs font-medium text-zinc-700 backdrop-blur dark:border-white/10 dark:bg-black/40 dark:text-zinc-200">
-                  Real estate & interior • Leads • SEO • Ads
+                  Lead Generation Experts • Real Estate Marketing • Interior Design SEO
                 </p>
               </Reveal>
               <Reveal delayMs={80}>
                 <h1 className="mt-5 text-balance text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-                  Grow your{" "}
+                  Generate Quality Leads for{" "}
                   <span className="underline decoration-(--brand)/60 underline-offset-4">
-                    real estate & interior
+                    Real Estate & Interior
                   </span>{" "}
-                  business with{" "}
+                  Businesses in{" "}
                   <span className="underline decoration-(--accent)/70 underline-offset-4">
-                    predictable leads
-                  </span>{" "}
-                  in Noida.
+                    Noida
+                  </span>
                 </h1>
               </Reveal>
               <Reveal delayMs={140}>
                 <p className="mt-5 max-w-xl text-pretty text-base leading-7 text-zinc-600 dark:text-zinc-300">
-                  We help builders, interior studios, and architects turn traffic into
-                  inquiries using Meta Ads, SEO, conversion-ready websites, and
-                  lead tracking with clear weekly reporting.
+                  We help builders, interior designers, and architects attract high-quality leads through targeted Meta Ads, local SEO optimization, and conversion-focused websites. Get weekly performance reports and measurable ROI.
                 </p>
               </Reveal>
 
@@ -58,7 +55,7 @@ export default function Home() {
                       10+
                     </div>
                     <div className="mt-1 text-zinc-600 dark:text-zinc-400">
-                      years focused on your niche
+                      Years of Real Estate Marketing Experience
                     </div>
                   </div>
                 </Reveal>
@@ -78,7 +75,7 @@ export default function Home() {
                       150%
                     </div>
                     <div className="mt-1 text-zinc-600 dark:text-zinc-400">
-                      avg lead lift (6 months)
+                      Average Lead Growth in 6 Months
                     </div>
                   </div>
                 </Reveal>
@@ -87,48 +84,48 @@ export default function Home() {
 
             <div className="relative">
               <Reveal delayMs={220} className="rounded-3xl">
-                <div className="rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5">
-                <div className="flex items-center justify-between">
-                  <div className="text-sm font-semibold">Pipeline Snapshot</div>
-                  <div className="rounded-full border border-black/10 px-3 py-1 text-xs text-zinc-600 dark:border-white/10 dark:text-zinc-400">
-                    Last 30 days
+                <div className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-white/5">
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm font-semibold">Pipeline Snapshot</div>
+                    <div className="rounded-full border border-black/10 px-3 py-1 text-xs text-zinc-600 dark:border-white/10 dark:text-zinc-400">
+                      Last 30 days
+                    </div>
+                  </div>
+                  <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                    <div className="rounded-2xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black">
+                      <div className="text-xs text-zinc-500">Leads</div>
+                      <div className="mt-1 text-2xl font-semibold">286</div>
+                      <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-white/10">
+                        <div className="h-full w-full rounded-full bg-(--brand)" />
+                      </div>
+                    </div>
+                    <div className="rounded-2xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black">
+                      <div className="text-xs text-zinc-500">Qualified</div>
+                      <div className="mt-1 text-2xl font-semibold">124</div>
+                      <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-white/10">
+                        <div className="h-full w-[43%] rounded-full bg-(--brand-2)" />
+                      </div>
+                    </div>
+                    <div className="rounded-2xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black">
+                      <div className="text-xs text-zinc-500">Meetings</div>
+                      <div className="mt-1 text-2xl font-semibold">58</div>
+                      <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-white/10">
+                        <div className="h-full w-[20%] rounded-full bg-(--accent)" />
+                      </div>
+                    </div>
+                    <div className="rounded-2xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black">
+                      <div className="text-xs text-zinc-500">Revenue</div>
+                      <div className="mt-1 text-2xl font-semibold">Rs 24L</div>
+                      <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-white/10">
+                        <div className="h-full w-[64%] rounded-full bg-(--accent-2)" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-6 rounded-2xl border border-black/10 bg-white p-4 text-sm leading-6 text-zinc-600 dark:border-white/10 dark:bg-black dark:text-zinc-300">
+                    “Illustrative 30-day snapshot: optimized for pipeline quality
+                    from inquiries to qualified meetings and revenue.”
                   </div>
                 </div>
-                <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                  <div className="rounded-2xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black">
-                    <div className="text-xs text-zinc-500">Leads</div>
-                    <div className="mt-1 text-2xl font-semibold">286</div>
-                    <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-white/10">
-                      <div className="h-full w-full rounded-full bg-(--brand)" />
-                    </div>
-                  </div>
-                  <div className="rounded-2xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black">
-                    <div className="text-xs text-zinc-500">Qualified</div>
-                    <div className="mt-1 text-2xl font-semibold">124</div>
-                    <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-white/10">
-                      <div className="h-full w-[43%] rounded-full bg-(--brand-2)" />
-                    </div>
-                  </div>
-                  <div className="rounded-2xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black">
-                    <div className="text-xs text-zinc-500">Meetings</div>
-                    <div className="mt-1 text-2xl font-semibold">58</div>
-                    <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-white/10">
-                      <div className="h-full w-[20%] rounded-full bg-(--accent)" />
-                    </div>
-                  </div>
-                  <div className="rounded-2xl border border-black/10 bg-white p-4 dark:border-white/10 dark:bg-black">
-                    <div className="text-xs text-zinc-500">Revenue</div>
-                    <div className="mt-1 text-2xl font-semibold">Rs 24L</div>
-                    <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-white/10">
-                      <div className="h-full w-[64%] rounded-full bg-(--accent-2)" />
-                    </div>
-                  </div>
-                </div>
-                <div className="mt-6 rounded-2xl border border-black/10 bg-white p-4 text-sm leading-6 text-zinc-600 dark:border-white/10 dark:bg-black dark:text-zinc-300">
-                  “Illustrative 30-day snapshot: optimized for pipeline quality
-                  from inquiries to qualified meetings and revenue.”
-                </div>
-              </div>
               </Reveal>
               <div className="pointer-events-none absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-[color-mix(in_oklab,var(--brand)_18%,transparent)] blur-3xl" />
             </div>
@@ -140,7 +137,7 @@ export default function Home() {
         <div className="mx-auto w-full max-w-6xl px-3 py-10 sm:px-5">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-sm text-zinc-600 dark:text-zinc-300">
-              Trusted by real estate & interior teams in Noida
+              Trusted by Leading Real Estate & Interior Companies in Noida
             </p>
             <div className="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:justify-end">
               {[
@@ -173,35 +170,30 @@ export default function Home() {
             </Reveal>
             <Reveal delayMs={80}>
               <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-                We build predictable growth for real estate and interior brands.
+                Your Strategic Partner for Real Estate Growth
               </h2>
             </Reveal>
             <Reveal delayMs={140}>
               <p className="mt-4 max-w-2xl text-sm leading-7 text-zinc-600 dark:text-zinc-300 sm:text-base">
-                Lead Catch is a Noida-based digital growth partner focused on real
-                estate, interiors, and architecture businesses. We combine paid ads,
-                SEO, conversion-first websites, and clean lead tracking so your team
-                gets better inquiries and clearer pipeline visibility.
+                Lead Catch is Noida's premier digital marketing agency specializing in real estate, interior design, and architecture. We deliver targeted lead generation through Meta Ads, Google Ads, local SEO, and high-converting landing pages.
               </p>
             </Reveal>
             <Reveal delayMs={200}>
               <p className="mt-3 max-w-2xl text-sm leading-7 text-zinc-600 dark:text-zinc-300 sm:text-base">
-                Our approach is practical: understand your audience, create offers
-                that convert, optimize every step from click to call, and share
-                reporting your team can actually act on.
+                Our proven approach: understand your target audience, create compelling offers that convert, optimize every touchpoint from click to call, and provide clear, actionable reporting that drives business decisions.
               </p>
             </Reveal>
           </div>
 
           <Reveal delayMs={160}>
             <div className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-white/5">
-              <h3 className="text-lg font-semibold tracking-tight">Why teams choose us</h3>
+              <h3 className="text-lg font-semibold tracking-tight">Why Real Estate Teams Choose Us</h3>
               <ul className="mt-5 space-y-3 text-sm text-zinc-600 dark:text-zinc-300">
                 {[
-                  "Niche-first strategy for real estate and interior demand generation",
-                  "Fast execution loops across creatives, landing pages, and forms",
-                  "Transparent weekly reporting with lead quality insights",
-                  "Long-term SEO foundation plus short-term lead momentum",
+                  "Specialized real estate and interior design marketing strategy",
+                  "Rapid campaign execution with creative optimization",
+                  "Weekly performance reports with lead quality insights",
+                  "Long-term SEO foundation with immediate lead generation",
                 ].map((point) => (
                   <li key={point} className="flex gap-2">
                     <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-(--accent)" />
@@ -227,12 +219,12 @@ export default function Home() {
         <div className="max-w-2xl">
           <Reveal>
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-              Services
+              Digital Marketing Services for Real Estate
             </h2>
           </Reveal>
           <Reveal delayMs={90}>
             <p className="mt-4 text-zinc-600 dark:text-zinc-300">
-              Focused scope. Clear execution. Measurable outcomes.
+              Comprehensive digital solutions designed specifically for real estate and interior design businesses in Noida.
             </p>
           </Reveal>
         </div>
@@ -240,24 +232,24 @@ export default function Home() {
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {[
             {
-              title: "Digital Advertising",
-              desc: "Meta + Google ads for property and interior leads: creatives direction, targeting, lead forms, and weekly optimization.",
-              tag: "Ads",
+              title: "Real Estate Advertising",
+              desc: "Targeted Meta and Google Ads campaigns for property listings and interior design services. Includes creative direction, audience targeting, lead forms, and weekly optimization.",
+              tag: "PPC Ads",
             },
             {
-              title: "SEO for Real Estate & Interiors",
-              desc: "Technical SEO, on-page improvements, and content planning for projects, services, and local search in Noida.",
-              tag: "Organic",
+              title: "Local SEO for Real Estate",
+              desc: "Comprehensive SEO strategy including technical optimization, local search enhancement, and content marketing for real estate and interior design businesses in Noida.",
+              tag: "Local SEO",
             },
             {
-              title: "Website Development",
-              desc: "Conversion-ready websites/landing pages for builders and interior studios with speed, UX, and SEO hygiene.",
-              tag: "Web",
+              title: "Real Estate Website Development",
+              desc: "High-converting websites and landing pages for builders and interior designers. Optimized for lead capture, mobile responsiveness, and search engine visibility.",
+              tag: "Web Design",
             },
             {
-              title: "Mobile App Development",
-              desc: "Android/iOS apps with clean UX, API integration, analytics events, and production-ready builds for your customer journey.",
-              tag: "App",
+              title: "Real Estate Mobile Apps",
+              desc: "Custom mobile applications for property browsing, interior design visualization, and client management with seamless integration and analytics.",
+              tag: "Mobile Apps",
               center: true,
             },
           ].map((s) => (
@@ -531,8 +523,8 @@ export default function Home() {
         <div className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5">
           <div className="grid gap-10 lg:grid-cols-2">
             <div>
-              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-                Get your free consultation
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+                Your Strategic Partner for Real Estate Growth
               </h2>
               <p className="mt-4 max-w-xl text-zinc-600 dark:text-zinc-300">
                 Share your business goal, budget range, and current channels.

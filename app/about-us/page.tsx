@@ -9,19 +9,17 @@ export default function AboutUsPage() {
         <div className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5 sm:py-20">
           <Reveal>
             <p className="inline-flex items-center gap-2 rounded-full border border-(--accent)/30 bg-white/75 px-3 py-1 text-xs font-medium text-zinc-800 backdrop-blur dark:border-(--accent)/35 dark:bg-black/35 dark:text-zinc-100">
-              Real estate & interior marketing, done end-to-end
+              Your Local Real Estate Marketing Experts
             </p>
           </Reveal>
           <Reveal delayMs={90}>
             <h1 className="mt-5 text-balance text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-              We build lead growth systems for real estate & interiors.
+              We Build Complete Lead Generation Systems for Real Estate Success.
             </h1>
           </Reveal>
           <Reveal delayMs={150}>
             <p className="mt-5 max-w-2xl text-pretty text-base leading-7 text-zinc-600 dark:text-zinc-300">
-              We don’t just run campaigns. We design a complete pipeline for
-              Noida businesses: offer → ads/SEO → lead landing pages → tracking →
-              conversion improvements — so growth is measurable and repeatable.
+              We go beyond running campaigns. We design complete marketing pipelines for Noida businesses: from compelling offers and targeted ads to optimized landing pages and comprehensive tracking - ensuring your growth is both measurable and sustainable.
             </p>
           </Reveal>
 
@@ -49,14 +47,12 @@ export default function AboutUsPage() {
           <div>
             <Reveal>
               <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-                What we believe
+                Our Philosophy: Results-Driven Real Estate Marketing
               </h2>
             </Reveal>
             <Reveal delayMs={90}>
               <p className="mt-4 text-zinc-600 dark:text-zinc-300">
-                The best “shortcut” to growth is discipline: clear goals, clean
-                tracking, fast shipping, and continuous testing for real estate
-                and interior leads.
+                The most effective path to real estate growth combines clear objectives, precise tracking, rapid implementation, and continuous optimization specifically for property and interior design markets.
               </p>
             </Reveal>
           </div>
@@ -64,20 +60,20 @@ export default function AboutUsPage() {
           <div className="grid gap-4 sm:grid-cols-2">
             {[
               {
-                title: "Qualified inquiries > vanity",
-                desc: "We optimize for lead quality, booked site visits, and revenue impact.",
+                title: "Quality Leads Over Vanity Metrics",
+                desc: "We focus on generating qualified leads, booked site visits, and measurable revenue impact for your real estate business.",
               },
               {
-                title: "Speed with quality",
-                desc: "We ship lead pages, creatives, and experiments fast without breaking tracking.",
+                title: "Speed Without Compromising Quality",
+                desc: "We rapidly deploy landing pages, creatives, and marketing experiments while maintaining perfect tracking integrity.",
               },
               {
-                title: "Clear reporting",
-                desc: "Simple dashboards and weekly updates focused on conversion and pipeline.",
+                title: "Transparent Performance Reporting",
+                desc: "Clear dashboards and weekly updates focused on conversion rates, pipeline health, and ROI metrics that matter.",
               },
               {
-                title: "Lead tracking that works",
-                desc: "Forms, calls, and analytics events implemented properly for measurable growth.",
+                title: "Comprehensive Lead Tracking",
+                desc: "Proper implementation of forms, call tracking, and analytics events to ensure every lead is captured and attributed correctly.",
               },
             ].map((v) => (
               <Reveal key={v.title} delayMs={120}>
@@ -98,29 +94,29 @@ export default function AboutUsPage() {
       <section className="border-y border-black/10 bg-[color-mix(in_oklab,var(--accent)_8%,white)] dark:border-white/10 dark:bg-[color-mix(in_oklab,var(--accent)_12%,black)]">
         <div className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5">
           <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-            Our process
+            Our Proven Real Estate Marketing Process
           </h2>
           <div className="mt-10 grid gap-6 lg:grid-cols-4">
             {[
               {
                 step: "01",
                 title: "Audit",
-                desc: "Current ads/SEO, tracking, landing pages, and offer clarity for your niche.",
+                desc: "Comprehensive analysis of current advertising campaigns, SEO performance, tracking setup, and offer positioning for your real estate niche.",
               },
               {
                 step: "02",
                 title: "Plan",
-                desc: "Roadmap for lead generation: experiments, priorities, and KPIs that matter.",
+                desc: "Strategic roadmap for real estate lead generation including testing priorities, campaign structure, and performance KPIs.",
               },
               {
                 step: "03",
                 title: "Build",
-                desc: "Campaigns, creatives, lead landing pages, and tracking events (calls/forms).",
+                desc: "Implementation of targeted campaigns, compelling creatives, high-converting landing pages, and comprehensive lead tracking.",
               },
               {
                 step: "04",
                 title: "Optimize",
-                desc: "CRO, budget scaling, SEO iterations, and weekly reporting based on pipeline quality.",
+                desc: "Continuous optimization through conversion rate testing, budget scaling, SEO improvements, and data-driven weekly reporting.",
               },
             ].map((p) => (
               <div
@@ -143,10 +139,9 @@ export default function AboutUsPage() {
           <div className="mt-12 rounded-3xl border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-black">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <div className="text-sm font-semibold">Want a free growth audit?</div>
+                <div className="text-sm font-semibold">Ready for Your Free Real Estate Marketing Audit?</div>
                 <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-300">
-                  Share your goal, project type, and budget range. We’ll send an
-                  action plan within 48 hours.
+                  Share your business goals, target market, and budget. We'll deliver a customized action plan within 48 hours.
                 </div>
               </div>
               <Link

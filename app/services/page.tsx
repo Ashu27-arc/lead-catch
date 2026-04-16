@@ -8,11 +8,11 @@ const serviceGroups = [
     items: [
       {
         title: "Digital Advertising",
-        desc: "Meta + Google campaigns for property and interior leads: targeting, creatives direction, lead forms, and weekly optimization.",
+        desc: "Specialized Meta and Google advertising campaigns designed specifically for real estate listings, property developments, and interior design services. Includes audience targeting, creative development, lead form optimization, and continuous performance improvement.",
       },
       {
         title: "SEO for Real Estate & Interiors",
-        desc: "Technical SEO, on-page improvements, and content planning that compounds rankings and brings qualified local search traffic.",
+        desc: "Complete SEO solution for real estate businesses including technical optimization, local search enhancement, content strategy, and authority building to rank higher in Noida property searches.",
       },
     ],
   },
@@ -22,11 +22,11 @@ const serviceGroups = [
     items: [
       {
         title: "Website Development",
-        desc: "Fast marketing websites/landing pages for builders and interior studios with SEO-ready structure, UX, and lead capture.",
+        desc: "Professional website development for real estate companies featuring property showcases, lead capture forms, mobile optimization, and integration with CRM systems for maximum conversion.",
       },
       {
         title: "Mobile App Development",
-        desc: "Android/iOS apps with clean UX, API integration, analytics events, and production-ready builds for your customer journey.",
+        desc: "Custom mobile applications for real estate businesses including property browsing, virtual tours, client management, and push notifications to engage potential buyers throughout their journey.",
       },
     ],
   },
@@ -40,18 +40,17 @@ export default function ServicesPage() {
         <div className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5 sm:py-20">
           <Reveal>
             <p className="inline-flex items-center gap-2 rounded-full border border-(--brand)/30 bg-white/80 px-3 py-1 text-xs font-medium text-zinc-800 backdrop-blur dark:border-(--brand)/35 dark:bg-black/35 dark:text-zinc-100">
-              Services for real estate & interiors
+              Comprehensive Real Estate Marketing Solutions
             </p>
           </Reveal>
           <Reveal delayMs={90}>
             <h1 className="mt-5 text-balance text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-              Built to generate qualified leads in Noida.
+              Drive Real Estate Growth with Our Expert Marketing Services.
             </h1>
           </Reveal>
           <Reveal delayMs={150}>
             <p className="mt-5 max-w-2xl text-pretty text-base leading-7 text-zinc-600 dark:text-zinc-300">
-              Digital advertising, SEO, lead-capture websites, and mobile apps —
-              delivered with clear scope, weekly reporting, and conversion-focused execution.
+              From targeted advertising and local SEO to high-converting websites and mobile apps - we deliver comprehensive digital marketing solutions with clear reporting and proven results for real estate businesses.
             </p>
           </Reveal>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -75,19 +74,18 @@ export default function ServicesPage() {
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-              What you get
+              What Makes Our Real Estate Marketing Different
             </h2>
             <p className="mt-4 text-zinc-600 dark:text-zinc-300">
-              Clear deliverables, weekly reporting, and fast iterations. We’ll
-              align on KPIs and ship experiments every month.
+              We deliver measurable results through strategic planning, transparent reporting, rapid execution, and continuous optimization tailored specifically for real estate and interior design markets.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {[
-              { k: "Setup", v: "Tracking + offer/landing audit + baseline" },
-              { k: "Cadence", v: "Weekly reporting + priority updates" },
-              { k: "Execution", v: "Ads + creatives + lead pages" },
-              { k: "Optimization", v: "CRO + scaling + SEO learning loop" },
+              { k: "Strategic Foundation", v: "Comprehensive audit + tracking setup + performance baseline" },
+              { k: "Weekly Progress", v: "Detailed reports + campaign optimization + strategy updates" },
+              { k: "Targeted Execution", v: "Real estate ads + compelling creatives + optimized landing pages" },
+              { k: "Continuous Growth", v: "Conversion optimization + budget scaling + SEO enhancement" },
             ].map((x) => (
               <div
                 key={x.k}
@@ -140,11 +138,10 @@ export default function ServicesPage() {
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <div className="text-sm font-semibold">
-                  Not sure what you need?
+                  Unsure Which Real Estate Marketing Service You Need?
                 </div>
                 <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-300">
-                  Share your business type, city (Noida), and lead goals. We’ll
-                  recommend a plan that matches your funnel.
+                  Tell us about your real estate business type, target locations, and lead generation goals. We'll recommend the perfect marketing mix for your success.
                 </div>
               </div>
               <Link

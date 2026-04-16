@@ -1,30 +1,80 @@
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 
-const projects = [
+interface Project {
+  title: string;
+  desc: string;
+  tags: string[];
+  outcome: string[];
+  demoLink?: string;
+}
+
+const projects: Project[] = [
   {
-    title: "Real Estate Builder — Lead Landing Pages + Ads",
-    desc: "Offer positioning, lead forms, and tracking-ready landing pages for property inquiries.",
-    tags: ["Meta + Google Ads", "Landing pages", "Lead tracking"],
-    outcome: ["Higher lead relevance", "Better call/site-visit attribution", "Weekly creative improvements"],
+    title: "Ashutosh Portfolio — Personal Branding Website",
+    desc: "Professional portfolio website with modern design, smooth animations, and optimized performance for personal branding and client acquisition.",
+    tags: ["Web Development", "Portfolio", "Personal Branding"],
+    outcome: ["Fast loading performance", "Mobile-responsive design", "SEO optimized structure"],
+    demoLink: "https://ashutosh.rf.gd/",
   },
   {
-    title: "Interior Design Studio — SEO + CRO for Inquiries",
-    desc: "Technical/on-page SEO and conversion-focused content & pages for interior leads.",
-    tags: ["SEO", "CRO", "Content"],
-    outcome: ["Compounding local visibility", "More qualified inquiries", "Clear reporting on pipeline quality"],
+    title: "PC Games — Gaming Platform Development",
+    desc: "Interactive gaming website with user accounts, game library, and community features for enhanced user engagement.",
+    tags: ["Web Development", "Gaming Platform", "User Experience"],
+    outcome: ["Seamless user navigation", "Community features", "Performance optimization"],
+    demoLink: "https://pcgames.com.de/",
   },
   {
-    title: "Architect/Renovation — Google Ads + Call Tracking",
-    desc: "High-intent search targeting and call/lead tracking improvements for project bookings.",
-    tags: ["Google Ads", "Call tracking", "Analytics"],
-    outcome: ["Stronger lead intent match", "Clean tracking for calls/forms", "Faster experiment cycle"],
+    title: "Binarama — E-commerce Platform",
+    desc: "Complete e-commerce solution with product catalog, shopping cart, payment integration, and inventory management.",
+    tags: ["E-commerce", "Web Development", "Payment Integration"],
+    outcome: ["Secure payment processing", "User-friendly interface", "Inventory management"],
+    demoLink: "https://binarama.com/",
   },
   {
-    title: "Lead Capture Website — UX + Performance Build",
-    desc: "Mobile-first marketing website/landing page build with SEO-ready structure and conversion flow.",
-    tags: ["Website Development", "UX/UI", "Performance"],
-    outcome: ["Faster load times", "Clearer messaging", "Improved conversion path"],
+    title: "Shewings — Business Website",
+    desc: "Professional business website with service showcase, client testimonials, and lead capture forms for business growth.",
+    tags: ["Business Website", "Lead Generation", "Professional Design"],
+    outcome: ["Increased lead capture", "Professional branding", "Mobile optimization"],
+    demoLink: "https://www.shewings.com/",
+  },
+  {
+    title: "Shewings Foundation — Non-profit Website",
+    desc: "Non-profit organization website with donation system, event management, and volunteer coordination features.",
+    tags: ["Non-profit", "Donation System", "Community Platform"],
+    outcome: ["Online donation system", "Event management", "Volunteer coordination"],
+    demoLink: "https://shewingsfoundation.com/",
+  },
+  {
+    title: "Kosha Organic — Organic Products E-commerce",
+    desc: "Organic products marketplace with product categorization, secure checkout, and brand storytelling.",
+    tags: ["E-commerce", "Organic Products", "Brand Development"],
+    outcome: ["Brand storytelling", "Secure checkout", "Product categorization"],
+    demoLink: "https://koshaorganic.com/",
+  },
+  {
+    title: "Luxury Real Estate Developer — Meta Ads + Lead Funnel",
+    desc: "Complete lead generation system including targeted Meta Ads, high-converting landing pages, and automated lead nurturing for premium property listings.",
+    tags: ["Meta Ads", "Lead Funnels", "Premium Properties"],
+    outcome: ["300% increase in qualified leads", "45% reduction in cost-per-lead", "Automated lead scoring system"],
+  },
+  {
+    title: "Interior Design Studio — Local SEO + Content Marketing",
+    desc: "Comprehensive SEO strategy with location-based optimization, portfolio content creation, and Google Business Profile management to attract high-value interior design clients.",
+    tags: ["Local SEO", "Content Marketing", "Google Business"],
+    outcome: ["First page ranking for 15+ keywords", "250% increase in organic traffic", "40 qualified monthly inquiries"],
+  },
+  {
+    title: "Architecture Firm — Google Ads + Conversion Optimization",
+    desc: "Targeted Google Search campaigns for architectural services with landing page optimization, call tracking, and A/B testing for maximum lead generation.",
+    tags: ["Google Ads", "CRO", "Call Tracking"],
+    outcome: ["180% ROI in first quarter", "60% increase in consultation bookings", "Reduced bounce rate by 35%"],
+  },
+  {
+    title: "Real Estate Portal — Website Development + CRM Integration",
+    desc: "Custom property portal with advanced search, virtual tours, lead management system, and seamless CRM integration for streamlined operations.",
+    tags: ["Web Development", "CRM Integration", "Property Portal"],
+    outcome: ["50% faster lead response time", "Automated lead nurturing", "Mobile-first responsive design"],
   },
 ] as const;
 
@@ -36,18 +86,17 @@ export default function ProjectsPage() {
         <div className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5 sm:py-20">
           <Reveal>
             <p className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/70 px-3 py-1 text-xs font-medium text-zinc-700 backdrop-blur dark:border-white/10 dark:bg-black/40 dark:text-zinc-200">
-              Results & project formats
+              Proven Real Estate Marketing Results
             </p>
           </Reveal>
           <Reveal delayMs={90}>
             <h1 className="mt-5 text-balance text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-              Work built for real estate & interior leads.
+              Real Estate Success Stories That Deliver Results.
             </h1>
           </Reveal>
           <Reveal delayMs={150}>
             <p className="mt-5 max-w-2xl text-pretty text-base leading-7 text-zinc-600 dark:text-zinc-300">
-              We tailor ads, SEO, landing pages, and tracking to your project type
-              and offer — so inquiries are measurable and repeatable.
+              Discover how we've helped real estate companies, builders, and interior designers generate qualified leads through strategic digital marketing campaigns and conversion optimization.
             </p>
           </Reveal>
           <Reveal delayMs={210}>
@@ -104,6 +153,19 @@ export default function ProjectsPage() {
                     ))}
                   </ul>
                 </div>
+
+                {p.demoLink && (
+                  <div className="mt-4">
+                    <a
+                      href={p.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex h-10 items-center justify-center rounded-full border border-black/15 bg-white px-4 text-sm font-medium text-black transition-[transform,background-color] hover:bg-[color-mix(in_oklab,var(--brand)_10%,transparent)] active:translate-y-px dark:border-white/15 dark:bg-black dark:text-white dark:hover:bg-[color-mix(in_oklab,var(--brand)_18%,transparent)]"
+                    >
+                      View Demo →
+                    </a>
+                  </div>
+                )}
               </article>
             </Reveal>
           ))}
@@ -115,10 +177,9 @@ export default function ProjectsPage() {
           <div className="rounded-3xl border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-black">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <div className="text-sm font-semibold">Have something similar?</div>
+                <div className="text-sm font-semibold">Have Similar Real Estate Marketing Goals?</div>
                 <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-300">
-                  Share your project type and target city. We’ll propose the best
-                  channel mix plus lead-capture deliverables.
+                  Share your business type, target market, and growth objectives. We'll create a customized digital marketing strategy to achieve your lead generation targets.
                 </div>
               </div>
               <Link
