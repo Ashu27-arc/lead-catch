@@ -5,6 +5,7 @@ import { useEffect, useRef, useState, type ChangeEvent, type FormEvent } from "r
 type FormState = {
   name: string;
   email: string;
+  phone: string;
   website: string;
   message: string;
 };
@@ -22,12 +23,12 @@ export function FreeAuditModal({
   const [form, setForm] = useState<FormState>({
     name: "",
     email: "",
+    phone: "",
     website: "",
     message: "",
   });
-  const [status, setStatus] = useState<"idle" | "submitting" | "success">(
-    "idle",
-  );
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [feedbackMessage, setFeedbackMessage] = useState("");
 
   useEffect(() => {
     if (!open) return;
@@ -36,9 +37,11 @@ export function FreeAuditModal({
     setForm({
       name: "",
       email: "",
+      phone: "",
       website: "",
       message: "",
     });
+    setFeedbackMessage("");
 
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
@@ -80,16 +83,38 @@ export function FreeAuditModal({
     };
 
   const canSubmit =
-    form.name.trim().length > 1 && form.email.trim().includes("@");
+    form.name.trim().length > 1 &&
+    form.email.trim().includes("@") &&
+    form.phone.trim().length >= 10;
 
-  const onSubmit = (e: FormEvent) => {
+  const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!canSubmit || status !== "idle") return;
 
     setStatus("submitting");
-    window.setTimeout(() => {
+    setFeedbackMessage("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = (await response.json()) as { message?: string };
+
+      if (!response.ok) {
+        setStatus("error");
+        setFeedbackMessage(data.message ?? "Unable to submit your request.");
+        return;
+      }
+
       setStatus("success");
-    }, 900);
+      setFeedbackMessage(data.message ?? "Thanks! We received your request.");
+    } catch {
+      setStatus("error");
+      setFeedbackMessage("Network error. Please try again.");
+    }
   };
 
   return (
@@ -132,8 +157,8 @@ export function FreeAuditModal({
           <div className="mt-6 rounded-2xl border border-black/10 bg-white/70 p-5 dark:border-white/10 dark:bg-white/5">
             <div className="text-sm font-semibold">Thanks! (Demo)</div>
             <div className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
-              We will reach out within 48 hours with next steps for your
-              audit.
+              {feedbackMessage ||
+                "We will reach out within 48 hours with next steps for your audit."}
             </div>
             <div className="mt-5 flex gap-3">
               <button
@@ -176,6 +201,20 @@ export function FreeAuditModal({
                   autoComplete="email"
                 />
               </label>
+              <label className="block">
+                <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">
+                  Phone Number
+                </span>
+                <input
+                  className="mt-2 h-11 w-full rounded-xl border border-black/10 bg-white px-3 text-sm outline-none placeholder:text-zinc-400 focus:border-indigo-500/60 dark:border-white/10 dark:bg-black"
+                  placeholder="+91 98765 43210"
+                  type="tel"
+                  name="phone"
+                  value={form.phone}
+                  onChange={setField("phone")}
+                  autoComplete="tel"
+                />
+              </label>
             </div>
 
             <label className="block">
@@ -212,6 +251,12 @@ export function FreeAuditModal({
             >
               {status === "submitting" ? "Sending..." : "Get audit"}
             </button>
+
+            {status === "error" && (
+              <div className="text-xs text-red-600 dark:text-red-400">
+                {feedbackMessage}
+              </div>
+            )}
 
             <div className="text-xs text-zinc-500">
               Want a faster start? Email us at{" "}

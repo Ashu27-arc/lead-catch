@@ -5,12 +5,18 @@ import { ContactLead } from "@/models/ContactLead";
 type ContactPayload = {
   name: string;
   email: string;
+  phone?: string;
   website?: string;
   message: string;
 };
 
 function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function isValidPhone(phone: string): boolean {
+  const normalized = phone.replace(/[^\d+]/g, "");
+  return /^\+?\d{10,15}$/.test(normalized);
 }
 
 function sanitize(input: unknown): string {
@@ -24,6 +30,7 @@ export async function POST(request: Request) {
     const payload: ContactPayload = {
       name: sanitize(body.name),
       email: sanitize(body.email),
+      phone: sanitize(body.phone),
       website: sanitize(body.website),
       message: sanitize(body.message),
     };
@@ -38,6 +45,13 @@ export async function POST(request: Request) {
     if (!isValidEmail(payload.email)) {
       return NextResponse.json(
         { message: "Please enter a valid email address." },
+        { status: 400 },
+      );
+    }
+
+    if (payload.phone && !isValidPhone(payload.phone)) {
+      return NextResponse.json(
+        { message: "Please enter a valid phone number." },
         { status: 400 },
       );
     }
