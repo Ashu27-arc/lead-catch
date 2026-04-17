@@ -95,22 +95,26 @@ export function FreeAuditModal({
     setFeedbackMessage("");
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("/api/freeaudit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
 
-      const data = (await response.json()) as { message?: string };
+      const data = (await response.json().catch(() => null)) as {
+        message?: string;
+      } | null;
 
       if (!response.ok) {
         setStatus("error");
-        setFeedbackMessage(data.message ?? "Unable to submit your request.");
+        setFeedbackMessage(data?.message ?? "Unable to submit your request.");
         return;
       }
 
       setStatus("success");
-      setFeedbackMessage(data.message ?? "Thanks! We received your request.");
+      setFeedbackMessage(
+        data?.message ?? "Thanks! We received your free audit request.",
+      );
     } catch {
       setStatus("error");
       setFeedbackMessage("Network error. Please try again.");
@@ -138,8 +142,7 @@ export function FreeAuditModal({
               Get a Free Audit
             </div>
             <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-300">
-              Share your project details. This is a UI-only demo form (no
-              backend connected).
+              Share your project details and our team will get back to you.
             </div>
           </div>
           <button
@@ -155,7 +158,7 @@ export function FreeAuditModal({
 
         {status === "success" ? (
           <div className="mt-6 rounded-2xl border border-black/10 bg-white/70 p-5 dark:border-white/10 dark:bg-white/5">
-            <div className="text-sm font-semibold">Thanks! (Demo)</div>
+            <div className="text-sm font-semibold">Thanks!</div>
             <div className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
               {feedbackMessage ||
                 "We will reach out within 48 hours with next steps for your audit."}
@@ -215,21 +218,20 @@ export function FreeAuditModal({
                   autoComplete="tel"
                 />
               </label>
+              <label className="block">
+                <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">
+                  Website / Product
+                </span>
+                <input
+                  className="mt-2 h-11 w-full rounded-xl border border-black/10 bg-white px-3 text-sm outline-none placeholder:text-zinc-400 focus:border-indigo-500/60 dark:border-white/10 dark:bg-black"
+                  placeholder="https://"
+                  name="website"
+                  value={form.website}
+                  onChange={setField("website")}
+                  autoComplete="url"
+                />
+              </label>
             </div>
-
-            <label className="block">
-              <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">
-                Website / Product
-              </span>
-              <input
-                className="mt-2 h-11 w-full rounded-xl border border-black/10 bg-white px-3 text-sm outline-none placeholder:text-zinc-400 focus:border-indigo-500/60 dark:border-white/10 dark:bg-black"
-                placeholder="https://"
-                name="website"
-                value={form.website}
-                onChange={setField("website")}
-                autoComplete="url"
-              />
-            </label>
 
             <label className="block">
               <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">

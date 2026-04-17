@@ -5,6 +5,7 @@ import { FormEvent, useState } from "react";
 type FormState = {
   name: string;
   email: string;
+  phone: string;
   website: string;
   message: string;
 };
@@ -12,6 +13,7 @@ type FormState = {
 const initialState: FormState = {
   name: "",
   email: "",
+  phone: "",
   website: "",
   message: "",
 };
@@ -36,19 +38,21 @@ export function ContactUsForm() {
         body: JSON.stringify(formData),
       });
 
-      const data = (await response.json()) as { message?: string };
+      const data = (await response.json().catch(() => null)) as {
+        message?: string;
+      } | null;
 
       if (!response.ok) {
         setFeedback({
           type: "error",
-          message: data.message ?? "Unable to submit your request.",
+          message: data?.message ?? "Unable to submit your request.",
         });
         return;
       }
 
       setFeedback({
         type: "success",
-        message: data.message ?? "Thanks! We received your request.",
+        message: data?.message ?? "Thanks! We received your request.",
       });
       setFormData(initialState);
     } catch {
@@ -76,6 +80,7 @@ export function ContactUsForm() {
             onChange={(event) =>
               setFormData((previous) => ({ ...previous, name: event.target.value }))
             }
+            autoComplete="name"
             required
           />
         </label>
@@ -92,25 +97,46 @@ export function ContactUsForm() {
             onChange={(event) =>
               setFormData((previous) => ({ ...previous, email: event.target.value }))
             }
+            autoComplete="email"
             required
           />
         </label>
       </div>
 
-      <label className="block">
-        <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">
-          Company Website
-        </span>
-        <input
-          className="mt-2 h-11 w-full rounded-xl border border-black/10 bg-white px-3 text-sm outline-none placeholder:text-zinc-400 focus:border-indigo-500/60 dark:border-white/10 dark:bg-black"
-          placeholder="https://"
-          name="website"
-          value={formData.website}
-          onChange={(event) =>
-            setFormData((previous) => ({ ...previous, website: event.target.value }))
-          }
-        />
-      </label>
+      <div className="grid gap-4 sm:grid-cols-2">
+        <label className="block">
+          <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">
+            Phone Number
+          </span>
+          <input
+            className="mt-2 h-11 w-full rounded-xl border border-black/10 bg-white px-3 text-sm outline-none placeholder:text-zinc-400 focus:border-indigo-500/60 dark:border-white/10 dark:bg-black"
+            placeholder="+91 98765 43210"
+            type="tel"
+            name="phone"
+            value={formData.phone}
+            onChange={(event) =>
+              setFormData((previous) => ({ ...previous, phone: event.target.value }))
+            }
+            autoComplete="tel"
+          />
+        </label>
+        <label className="block">
+          <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">
+            Company Website
+          </span>
+          <input
+            className="mt-2 h-11 w-full rounded-xl border border-black/10 bg-white px-3 text-sm outline-none placeholder:text-zinc-400 focus:border-indigo-500/60 dark:border-white/10 dark:bg-black"
+            placeholder="https://"
+            type="url"
+            name="website"
+            value={formData.website}
+            onChange={(event) =>
+              setFormData((previous) => ({ ...previous, website: event.target.value }))
+            }
+            autoComplete="url"
+          />
+        </label>
+      </div>
 
       <label className="block">
         <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">
@@ -136,16 +162,26 @@ export function ContactUsForm() {
         {isSubmitting ? "Submitting..." : "Start Your Growth Journey"}
       </button>
 
-      <p
-        className={`text-xs ${
-          feedback?.type === "error"
-            ? "text-red-600 dark:text-red-400"
-            : "text-zinc-500"
-        }`}
-      >
-        {feedback?.message ??
-          "Prefer immediate assistance? Email us your business details and we'll respond within 24 hours with your personalized strategy."}
-      </p>
+      {feedback ? (
+        <p
+          className={`rounded-xl border px-3 py-2 text-sm ${
+            feedback.type === "error"
+              ? "border-red-300 bg-red-50 text-red-700 dark:border-red-500/40 dark:bg-red-500/10 dark:text-red-300"
+              : "border-emerald-300 bg-emerald-50 text-emerald-700 dark:border-emerald-500/40 dark:bg-emerald-500/10 dark:text-emerald-300"
+          }`}
+          role="status"
+          aria-live="polite"
+        >
+          {feedback.type === "success"
+            ? `Thank you! ${feedback.message}`
+            : feedback.message}
+        </p>
+      ) : (
+        <p className="text-xs text-zinc-500">
+          Prefer immediate assistance? Email us your business details and we'll
+          respond within 24 hours with your personalized strategy.
+        </p>
+      )}
     </form>
   );
 }
