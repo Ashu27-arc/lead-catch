@@ -1,4 +1,6 @@
+import { ContactUsForm } from "@/components/ContactUsForm";
 import { Reveal } from "@/components/Reveal";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -587,74 +589,30 @@ export default function Home() {
                   </span>
                 </div>
               </div>
+
+              <div className="mt-8 overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm dark:border-white/10 dark:bg-white/5 h-[330px]">
+                <Image
+                  src="/contact-growth-illustration.svg"
+                  alt="Lead generation planning illustration"
+                  width={1200}
+                  height={380}
+                  className="h-auto w-full"
+                  priority={false}
+                />
+              </div>
             </div>
 
-            <div className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-black">
-              <form className="space-y-4">
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <label className="block">
-                    <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">
-                      Name
-                    </span>
-                    <input
-                      className="mt-2 h-11 w-full rounded-xl border border-black/10 bg-white px-3 text-sm outline-none ring-0 placeholder:text-zinc-400 focus:border-indigo-500/60 dark:border-white/10 dark:bg-black"
-                      placeholder="Your name"
-                      name="name"
-                    />
-                  </label>
-                  <label className="block">
-                    <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">
-                      Email
-                    </span>
-                    <input
-                      className="mt-2 h-11 w-full rounded-xl border border-black/10 bg-white px-3 text-sm outline-none placeholder:text-zinc-400 focus:border-indigo-500/60 dark:border-white/10 dark:bg-black"
-                      placeholder="you@company.com"
-                      type="email"
-                      name="email"
-                    />
-                  </label>
-                </div>
-
-                <label className="block">
-                  <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">
-                    Website / Product
-                  </span>
-                  <input
-                    className="mt-2 h-11 w-full rounded-xl border border-black/10 bg-white px-3 text-sm outline-none placeholder:text-zinc-400 focus:border-indigo-500/60 dark:border-white/10 dark:bg-black"
-                    placeholder="https://"
-                    name="website"
-                  />
-                </label>
-
-                <label className="block">
-                  <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">
-                    What do you need help with?
-                  </span>
-                  <textarea
-                    className="mt-2 min-h-28 w-full rounded-xl border border-black/10 bg-white px-3 py-2 text-sm outline-none placeholder:text-zinc-400 focus:border-indigo-500/60 dark:border-white/10 dark:bg-black"
-                    placeholder="Ads / SEO / landing page / tracking / lead gen…"
-                    name="message"
-                  />
-                </label>
-
-                <button
-                  type="button"
-                  className="inline-flex h-11 w-full items-center justify-center rounded-full bg-(--brand) px-5 text-sm font-medium text-(--brand-contrast) transition-colors hover:bg-(--brand-2)"
-                >
-                  Send Message
-                </button>
-                <p className="text-xs text-zinc-500">
-                  This demo form doesn’t submit yet. Use email/phone above or
-                  visit the dedicated contact page.
+            <Reveal delayMs={160}>
+              <div className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-white/10 dark:bg-black">
+                <div className="text-sm font-semibold">Send Your Requirements (Free Marketing Audit)</div>
+                <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+                  Fill out the form below and our real estate marketing specialists will analyze your needs and create a personalized growth strategy.
                 </p>
-                <a
-                  href="/contact-us"
-                  className="inline-flex text-xs font-semibold underline decoration-black/20 underline-offset-4 hover:decoration-black/60 dark:decoration-white/20 dark:hover:decoration-white/60"
-                >
-                  Open contact page →
-                </a>
-              </form>
-            </div>
+
+                <ContactUsForm />
+              </div>
+            </Reveal>
+
           </div>
         </div>
       </section>

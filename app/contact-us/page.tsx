@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
+import { ContactUsForm } from "@/components/ContactUsForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -110,64 +111,7 @@ export default function ContactUsPage() {
                 Fill out the form below and our real estate marketing specialists will analyze your needs and create a personalized growth strategy.
               </p>
 
-              <form className="mt-6 space-y-4">
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <label className="block">
-                    <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">
-                      Your Name
-                    </span>
-                    <input
-                      className="mt-2 h-11 w-full rounded-xl border border-black/10 bg-white px-3 text-sm outline-none placeholder:text-zinc-400 focus:border-indigo-500/60 dark:border-white/10 dark:bg-black"
-                      placeholder="Your name"
-                      name="name"
-                    />
-                  </label>
-                  <label className="block">
-                    <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">
-                      Email Address
-                    </span>
-                    <input
-                      className="mt-2 h-11 w-full rounded-xl border border-black/10 bg-white px-3 text-sm outline-none placeholder:text-zinc-400 focus:border-indigo-500/60 dark:border-white/10 dark:bg-black"
-                      placeholder="you@company.com"
-                      type="email"
-                      name="email"
-                    />
-                  </label>
-                </div>
-
-                <label className="block">
-                  <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">
-                    Company Website
-                  </span>
-                  <input
-                    className="mt-2 h-11 w-full rounded-xl border border-black/10 bg-white px-3 text-sm outline-none placeholder:text-zinc-400 focus:border-indigo-500/60 dark:border-white/10 dark:bg-black"
-                    placeholder="https://"
-                    name="website"
-                  />
-                </label>
-
-                <label className="block">
-                  <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">
-                    Tell Us About Your Real Estate Business
-                  </span>
-                  <textarea
-                    className="mt-2 min-h-28 w-full rounded-xl border border-black/10 bg-white px-3 py-2 text-sm outline-none placeholder:text-zinc-400 focus:border-indigo-500/60 dark:border-white/10 dark:bg-black"
-                    placeholder="Tell us about your property listings, target clients, current marketing efforts..."
-                    name="message"
-                  />
-                </label>
-
-                <button
-                  type="button"
-                  className="inline-flex h-11 w-full items-center justify-center rounded-full bg-(--brand) px-5 text-sm font-medium text-(--brand-contrast) transition-colors hover:bg-(--brand-2)"
-                >
-                  Start Your Growth Journey
-                </button>
-
-                <p className="text-xs text-zinc-500">
-                  Prefer immediate assistance? Email us your business details and we'll respond within 24 hours with your personalized strategy.
-                </p>
-              </form>
+              <ContactUsForm />
             </div>
           </Reveal>
         </div>
