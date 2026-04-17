@@ -63,7 +63,8 @@ export async function POST(request: Request) {
       { message: "Thanks! We received your request." },
       { status: 200 },
     );
-  } catch {
+  } catch (error) {
+    console.error("Contact API error:", error);
     return NextResponse.json(
       { message: "Something went wrong. Please try again." },
       { status: 500 },
