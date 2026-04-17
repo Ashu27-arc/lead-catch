@@ -4,6 +4,7 @@ import "./globals.css";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { PageTransitionLoader } from "@/components/PageTransitionLoader";
+import { Analytics } from "@vercel/analytics/next";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -120,6 +121,7 @@ export default function RootLayout({
         <SiteHeader />
         {children}
         <SiteFooter />
+        <Analytics />
       </body>
     </html>
   );
