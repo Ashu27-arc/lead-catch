@@ -1,4 +1,17 @@
 import { Reveal } from "@/components/Reveal";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Team | Meet Our Real Estate Marketing Experts | Lead Catch",
+  description: "Meet the team at Lead Catch. Our experts specialize in real estate marketing, PPC, SEO, web development, and design. Learn about the professionals driving your success.",
+  keywords: "Lead Catch team, real estate marketing team, marketing experts Noida, SEO specialists, PPC experts, web developers, digital marketing professionals",
+  openGraph: {
+    title: "Our Team | Meet Our Real Estate Marketing Experts | Lead Catch",
+    description: "Meet the team at Lead Catch. Our experts specialize in real estate marketing, PPC, SEO, web development, and design.",
+    url: "https://www.leadcatch.in/our-team",
+    type: "website",
+  },
+};
 
 export default function OurTeam() {
   return (

@@ -1,4 +1,17 @@
 import { Reveal } from "@/components/Reveal";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Lead Catch | Real Estate Lead Generation & Digital Marketing in Noida",
+  description: "Premium lead generation services for real estate businesses in Noida. Get more qualified leads with our targeted ads, local SEO, and high-converting websites. 10+ years experience helping builders, interior designers, and architects.",
+  keywords: "real estate lead generation Noida, digital marketing Noida, SEO for builders, interior design marketing, property advertising, Google Ads for real estate, real estate website development, Noida marketing agency",
+  openGraph: {
+    title: "Lead Catch | Real Estate Lead Generation & Digital Marketing in Noida",
+    description: "Premium lead generation services for real estate businesses in Noida. Get more qualified leads with our targeted ads, local SEO, and high-converting websites.",
+    url: "https://www.leadcatch.in",
+    type: "website",
+  },
+};
 
 export default function Home() {
   return (
@@ -216,16 +229,26 @@ export default function Home() {
         id="services"
         className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5"
       >
-        <div className="max-w-2xl">
-          <Reveal>
-            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-              Comprehensive Digital Marketing Services for Real Estate Excellence
-            </h2>
-          </Reveal>
-          <Reveal delayMs={90}>
-            <p className="mt-4 text-zinc-600 dark:text-zinc-300">
-              We don't do generic marketing. Everything we build is specifically for real estate developers, interior designers, and architects here in Noida. Our strategies are practical and focused on getting you more qualified local clients who are actually ready to buy.
-            </p>
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div className="max-w-2xl">
+            <Reveal>
+              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+                Comprehensive Digital Marketing Services for Real Estate Excellence
+              </h2>
+            </Reveal>
+            <Reveal delayMs={90}>
+              <p className="mt-4 text-zinc-600 dark:text-zinc-300">
+                We don't do generic marketing. Everything we build is specifically for real estate developers, interior designers, and architects here in Noida. Our strategies are practical and focused on getting you more qualified local clients who are actually ready to buy.
+              </p>
+            </Reveal>
+          </div>
+          <Reveal delayMs={140}>
+            <a
+              href="/services"
+              className="inline-flex h-11 items-center justify-center rounded-full bg-(--brand) px-5 text-sm font-medium text-(--brand-contrast) transition-[transform,filter,background-color] hover:bg-(--brand-2) hover:brightness-105 active:translate-y-px"
+            >
+              Read more
+            </a>
           </Reveal>
         </div>
 
@@ -235,21 +258,25 @@ export default function Home() {
               title: "Facebook & Google Ads That Work",
               desc: "We run ads specifically for properties and interior design services. From designing the creatives to targeting the right audience and optimizing lead forms—we handle everything. Plus, we keep improving your campaigns every week based on real data.",
               tag: "PPC Ads",
+              href: "/services/ppc",
             },
             {
               title: "Local SEO That Gets You Found",
               desc: "Complete SEO to help you rank higher in local searches. We fix technical issues, optimize your Google Business Profile, and create content that actually matters to your customers. More visibility means more qualified inquiries from people in Noida.",
               tag: "Local SEO",
+              href: "/services/local-seo",
             },
             {
               title: "Websites Built to Convert",
               desc: "Beautiful, fast websites designed specifically for builders and interior designers. Every site we build is optimized to capture leads, works perfectly on mobile, and is set up for SEO. Your website should be your best salesperson—ours are.",
               tag: "Web Design",
+              href: "/services/web-design",
             },
             {
               title: "Mobile Apps for Your Clients",
               desc: "Custom apps that make it easy for clients to browse properties, visualize designs, and stay connected. We build user-friendly interfaces with analytics so you can understand how your clients are using the app and improve their experience.",
               tag: "Mobile Apps",
+              href: "/services/mobile-app",
               center: true,
             },
           ].map((s) => (

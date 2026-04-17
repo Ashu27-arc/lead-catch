@@ -1,5 +1,18 @@
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Digital Marketing Services for Real Estate in Noida | Lead Catch",
+  description: "Comprehensive digital marketing services for real estate businesses in Noida. We offer Meta & Google Ads, local SEO, website development, and mobile apps for builders, interior designers, and architects.",
+  keywords: "digital marketing services Noida, real estate marketing services, Google Ads for real estate, SEO services Noida, website development for builders, mobile app development for real estate, interior design marketing, property marketing services",
+  openGraph: {
+    title: "Digital Marketing Services for Real Estate in Noida | Lead Catch",
+    description: "Comprehensive digital marketing services for real estate businesses in Noida. We offer Meta & Google Ads, local SEO, website development, and mobile apps.",
+    url: "https://www.leadcatch.in/services",
+    type: "website",
+  },
+};
 
 const serviceGroups = [
   {
@@ -9,10 +22,12 @@ const serviceGroups = [
       {
         title: "Digital Advertising",
         desc: "Specialized Meta and Google advertising campaigns designed specifically for real estate listings, property developments, and interior design services. Includes audience targeting, creative development, lead form optimization, and continuous performance improvement.",
+        href: "/services/ppc",
       },
       {
         title: "SEO for Real Estate & Interiors",
         desc: "Complete SEO solution for real estate businesses including technical optimization, local search enhancement, content strategy, and authority building to rank higher in Noida property searches.",
+        href: "/services/local-seo",
       },
     ],
   },
@@ -23,10 +38,12 @@ const serviceGroups = [
       {
         title: "Website Development",
         desc: "Professional website development for real estate companies featuring property showcases, lead capture forms, mobile optimization, and integration with CRM systems for maximum conversion.",
+        href: "/services/web-design",
       },
       {
         title: "Mobile App Development",
         desc: "Custom mobile applications for real estate businesses including property browsing, virtual tours, client management, and push notifications to engage potential buyers throughout their journey.",
+        href: "/services/mobile-app",
       },
     ],
   },
@@ -116,16 +133,25 @@ export default function ServicesPage() {
                     {g.desc}
                   </p>
                 </Reveal>
-                <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                <div className="mt-8 grid gap-4 sm:grid-cols-2 sm:items-stretch">
                   {g.items.map((s) => (
                     <Reveal key={s.title} delayMs={120}>
-                      <div className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:border-(--brand)/35 hover:shadow-lg dark:border-white/10 dark:bg-black">
+                      <div className="flex min-h-[280px] flex-col rounded-2xl border border-black/10 bg-white p-6 shadow-sm transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:border-(--brand)/35 hover:shadow-lg dark:border-white/10 dark:bg-black">
                         <h3 className="text-lg font-semibold tracking-tight">
                           {s.title}
                         </h3>
-                        <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-300">
+                        <p className="mt-2 flex-1 text-sm leading-6 text-zinc-600 dark:text-zinc-300">
                           {s.desc}
                         </p>
+                        <Link
+                          href={s.href}
+                          className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-(--brand) transition-colors hover:text-(--brand-2)"
+                        >
+                          Read more
+                          <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </Link>
                       </div>
                     </Reveal>
                   ))}

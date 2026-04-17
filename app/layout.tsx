@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { PageTransitionLoader } from "@/components/PageTransitionLoader";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -115,6 +116,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <PageTransitionLoader />
         <SiteHeader />
         {children}
         <SiteFooter />

@@ -1,4 +1,17 @@
 import { Reveal } from "@/components/Reveal";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Careers | Join Our Real Estate Marketing Team in Noida | Lead Catch",
+  description: "Explore career opportunities at Lead Catch. Join our team of digital marketing experts helping real estate businesses grow. Open positions in Noida for marketing, development, and design roles.",
+  keywords: "careers at Lead Catch, digital marketing jobs Noida, real estate marketing careers, marketing jobs in Noida, SEO jobs, PPC jobs, web development jobs, content writing jobs Noida",
+  openGraph: {
+    title: "Careers | Join Our Real Estate Marketing Team in Noida | Lead Catch",
+    description: "Explore career opportunities at Lead Catch. Join our team of digital marketing experts helping real estate businesses grow.",
+    url: "https://www.leadcatch.in/careers",
+    type: "website",
+  },
+};
 
 export default function Careers() {
   return (

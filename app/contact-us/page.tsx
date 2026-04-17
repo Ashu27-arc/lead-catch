@@ -1,5 +1,18 @@
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us | Real Estate Marketing Services in Noida | Lead Catch",
+  description: "Get in touch with Lead Catch for expert real estate marketing services in Noida. Free marketing audit and consultation for builders, interior designers, and architects. Call us or email today.",
+  keywords: "contact Lead Catch, real estate marketing contact Noida, digital marketing consultation, lead generation consultation, marketing agency contact, Noida marketing services contact",
+  openGraph: {
+    title: "Contact Us | Real Estate Marketing Services in Noida | Lead Catch",
+    description: "Get in touch with Lead Catch for expert real estate marketing services in Noida. Free marketing audit and consultation.",
+    url: "https://www.leadcatch.in/contact-us",
+    type: "website",
+  },
+};
 
 export default function ContactUsPage() {
   return (

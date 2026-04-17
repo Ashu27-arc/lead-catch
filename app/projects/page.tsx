@@ -1,5 +1,18 @@
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Real Estate Marketing Case Studies & Success Stories | Lead Catch",
+  description: "View our proven real estate marketing results and case studies. See how we've helped builders, interior designers, and architects in Noida generate qualified leads and grow their businesses.",
+  keywords: "real estate case studies, marketing success stories, lead generation results, real estate marketing examples, PPC case studies, SEO success stories, Noida marketing results",
+  openGraph: {
+    title: "Real Estate Marketing Case Studies & Success Stories | Lead Catch",
+    description: "View our proven real estate marketing results and case studies. See how we've helped businesses generate qualified leads.",
+    url: "https://www.leadcatch.in/projects",
+    type: "website",
+  },
+};
 
 interface Project {
   title: string;

@@ -1,5 +1,18 @@
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us | Real Estate Marketing Agency in Noida | Lead Catch",
+  description: "Learn about Lead Catch, your trusted digital marketing partner for real estate businesses in Noida. 10+ years of experience helping builders, interior designers, and architects grow through strategic lead generation.",
+  keywords: "about Lead Catch, real estate marketing agency Noida, digital marketing company, lead generation experts, Noida marketing team, real estate marketing specialists, about our agency",
+  openGraph: {
+    title: "About Us | Real Estate Marketing Agency in Noida | Lead Catch",
+    description: "Learn about Lead Catch, your trusted digital marketing partner for real estate businesses in Noida. 10+ years of experience helping businesses grow.",
+    url: "https://www.leadcatch.in/about-us",
+    type: "website",
+  },
+};
 
 export default function AboutUsPage() {
   return (
