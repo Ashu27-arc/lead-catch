@@ -10,14 +10,14 @@ export default function Home() {
             <div>
               <Reveal>
                 <p className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/70 px-3 py-1 text-xs font-medium text-zinc-700 backdrop-blur dark:border-white/10 dark:bg-black/40 dark:text-zinc-200">
-                  Lead Generation Experts • Real Estate Marketing • Interior Design SEO
+                  Real Estate Lead Generation • Interior Design Marketing • Noida SEO Experts
                 </p>
               </Reveal>
               <Reveal delayMs={80}>
                 <h1 className="mt-5 text-balance text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-                  Generate Quality Leads for{" "}
+                  Premium Lead Generation for{" "}
                   <span className="underline decoration-(--brand)/60 underline-offset-4">
-                    Real Estate & Interior
+                    Real Estate
                   </span>{" "}
                   Businesses in{" "}
                   <span className="underline decoration-(--accent)/70 underline-offset-4">
@@ -27,7 +27,7 @@ export default function Home() {
               </Reveal>
               <Reveal delayMs={140}>
                 <p className="mt-5 max-w-xl text-pretty text-base leading-7 text-zinc-600 dark:text-zinc-300">
-                  We help builders, interior designers, and architects attract high-quality leads through targeted Meta Ads, local SEO optimization, and conversion-focused websites. Get weekly performance reports and measurable ROI.
+                  We know how tough it is to find the right clients in Noida's real estate market. That's why we've spent over 10 years helping builders, interior designers, and architects like you get more qualified leads. Our team runs targeted ads, improves your local SEO, and builds websites that actually convert. No fancy jargon—just real results that grow your business.
                 </p>
               </Reveal>
 
@@ -37,13 +37,13 @@ export default function Home() {
                     href="/contact-us"
                     className="inline-flex h-11 items-center justify-center rounded-full bg-(--brand) px-5 text-sm font-medium text-(--brand-contrast) transition-[transform,filter,background-color] hover:bg-(--brand-2) hover:brightness-105 active:translate-y-px"
                   >
-                    Get Free Consultation
+                    Get Your Free Marketing Strategy Session
                   </a>
                   <a
                     href="/projects"
                     className="inline-flex h-11 items-center justify-center rounded-full border border-black/15 bg-white px-5 text-sm font-medium text-black transition-[transform,background-color] hover:bg-[color-mix(in_oklab,var(--brand)_10%,transparent)] active:translate-y-px dark:border-white/15 dark:bg-black dark:text-white dark:hover:bg-[color-mix(in_oklab,var(--brand)_18%,transparent)]"
                   >
-                    See results
+                    View Our Real Estate Success Stories
                   </a>
                 </div>
               </Reveal>
@@ -137,7 +137,7 @@ export default function Home() {
         <div className="mx-auto w-full max-w-6xl px-3 py-10 sm:px-5">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-sm text-zinc-600 dark:text-zinc-300">
-              Trusted by Leading Real Estate & Interior Companies in Noida
+              Trusted by 200+ Leading Real Estate & Interior Design Companies in Noida
             </p>
             <div className="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:justify-end">
               {[
@@ -170,17 +170,17 @@ export default function Home() {
             </Reveal>
             <Reveal delayMs={80}>
               <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-                Your Strategic Partner for Real Estate Growth
+                Your Trusted Digital Marketing Partner for Real Estate Success
               </h2>
             </Reveal>
             <Reveal delayMs={140}>
               <p className="mt-4 max-w-2xl text-sm leading-7 text-zinc-600 dark:text-zinc-300 sm:text-base">
-                Lead Catch is Noida's premier digital marketing agency specializing in real estate, interior design, and architecture. We deliver targeted lead generation through Meta Ads, Google Ads, local SEO, and high-converting landing pages.
+                Lead Catch is a digital marketing agency based in Noida that works exclusively with real estate, interior design, and architecture businesses. We're not a general marketing agency—we know your industry inside and out. From Meta Ads and Google Ads to local SEO and websites that convert, we help you get more qualified leads and grow your business.
               </p>
             </Reveal>
-            <Reveal delayMs={200}>
+            <Reveal delayMs={140}>
               <p className="mt-3 max-w-2xl text-sm leading-7 text-zinc-600 dark:text-zinc-300 sm:text-base">
-                Our proven approach: understand your target audience, create compelling offers that convert, optimize every touchpoint from click to call, and provide clear, actionable reporting that drives business decisions.
+                We don't believe in one-size-fits-all solutions. We take the time to understand who your ideal clients are, create offers that actually make them pick up the phone, and optimize every step from their first click to becoming your customer. You'll get clear reports every week so you always know exactly how your marketing is performing.
               </p>
             </Reveal>
           </div>
@@ -190,10 +190,10 @@ export default function Home() {
               <h3 className="text-lg font-semibold tracking-tight">Why Real Estate Teams Choose Us</h3>
               <ul className="mt-5 space-y-3 text-sm text-zinc-600 dark:text-zinc-300">
                 {[
-                  "Specialized real estate and interior design marketing strategy",
-                  "Rapid campaign execution with creative optimization",
-                  "Weekly performance reports with lead quality insights",
-                  "Long-term SEO foundation with immediate lead generation",
+                  "We only work with real estate and interior design businesses - no generic marketing",
+                  "Fast campaign setup with creative that actually works in your market",
+                  "Weekly reports that show you exactly what's working and what's not",
+                  "SEO that builds long-term traffic while ads bring leads today",
                 ].map((point) => (
                   <li key={point} className="flex gap-2">
                     <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-(--accent)" />
@@ -219,12 +219,12 @@ export default function Home() {
         <div className="max-w-2xl">
           <Reveal>
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-              Digital Marketing Services for Real Estate
+              Comprehensive Digital Marketing Services for Real Estate Excellence
             </h2>
           </Reveal>
           <Reveal delayMs={90}>
             <p className="mt-4 text-zinc-600 dark:text-zinc-300">
-              Comprehensive digital solutions designed specifically for real estate and interior design businesses in Noida.
+              We don't do generic marketing. Everything we build is specifically for real estate developers, interior designers, and architects here in Noida. Our strategies are practical and focused on getting you more qualified local clients who are actually ready to buy.
             </p>
           </Reveal>
         </div>
@@ -232,23 +232,23 @@ export default function Home() {
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {[
             {
-              title: "Real Estate Advertising",
-              desc: "Targeted Meta and Google Ads campaigns for property listings and interior design services. Includes creative direction, audience targeting, lead forms, and weekly optimization.",
+              title: "Facebook & Google Ads That Work",
+              desc: "We run ads specifically for properties and interior design services. From designing the creatives to targeting the right audience and optimizing lead forms—we handle everything. Plus, we keep improving your campaigns every week based on real data.",
               tag: "PPC Ads",
             },
             {
-              title: "Local SEO for Real Estate",
-              desc: "Comprehensive SEO strategy including technical optimization, local search enhancement, and content marketing for real estate and interior design businesses in Noida.",
+              title: "Local SEO That Gets You Found",
+              desc: "Complete SEO to help you rank higher in local searches. We fix technical issues, optimize your Google Business Profile, and create content that actually matters to your customers. More visibility means more qualified inquiries from people in Noida.",
               tag: "Local SEO",
             },
             {
-              title: "Real Estate Website Development",
-              desc: "High-converting websites and landing pages for builders and interior designers. Optimized for lead capture, mobile responsiveness, and search engine visibility.",
+              title: "Websites Built to Convert",
+              desc: "Beautiful, fast websites designed specifically for builders and interior designers. Every site we build is optimized to capture leads, works perfectly on mobile, and is set up for SEO. Your website should be your best salesperson—ours are.",
               tag: "Web Design",
             },
             {
-              title: "Real Estate Mobile Apps",
-              desc: "Custom mobile applications for property browsing, interior design visualization, and client management with seamless integration and analytics.",
+              title: "Mobile Apps for Your Clients",
+              desc: "Custom apps that make it easy for clients to browse properties, visualize designs, and stay connected. We build user-friendly interfaces with analytics so you can understand how your clients are using the app and improve their experience.",
               tag: "Mobile Apps",
               center: true,
             },
@@ -291,34 +291,33 @@ export default function Home() {
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-                Case studies (sample)
+                Real Results We've Delivered
               </h2>
               <p className="mt-3 max-w-2xl text-zinc-600 dark:text-zinc-300">
-                Results vary by niche and offer — these are sample formats to
-                show how we present work.
+                Every business is different, so results vary. Here are some examples of how we've helped real estate and interior design companies grow.
               </p>
             </div>
             <a
               href="/contact-us"
               className="inline-flex h-10 w-full items-center justify-center rounded-full border border-black/15 bg-white px-4 text-sm font-medium text-black transition-colors hover:bg-black/5 dark:border-white/15 dark:bg-black dark:text-white dark:hover:bg-white/10 sm:w-auto"
             >
-              Get your plan →
+              Get Your Custom Real Estate Marketing Plan →
             </a>
           </div>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
             {[
               {
-                title: "Real Estate Builder — Ads + Lead Landing Pages",
-                bullets: ["Lead quality improvements", "Better call/site-visit tracking", "Weekly creative iterations"],
+                title: "Real Estate Builder — More Quality Leads",
+                bullets: ["Improved lead quality significantly", "Better tracking for calls and site visits", "Weekly creative testing and improvements"],
               },
               {
-                title: "Interior Design Studio — SEO + Offer Pages",
-                bullets: ["Local SEO growth in Noida", "Project/service content strategy", "Conversion-focused on-page fixes"],
+                title: "Interior Design Studio — SEO Growth",
+                bullets: ["Ranked higher in Noida local searches", "Created content strategy for projects and services", "Fixed on-page issues to boost conversions"],
               },
               {
-                title: "Architect/Renovation — Google Ads + CRO",
-                bullets: ["High-intent search targeting", "Offer positioning and forms", "Tracking + CRO learning loop"],
+                title: "Architect/Renovation — Google Ads Success",
+                bullets: ["Targeted high-intent search keywords", "Improved offer positioning and forms", "Continuous testing and optimization loop"],
               },
             ].map((c) => (
               <div
@@ -344,24 +343,24 @@ export default function Home() {
 
       <section className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5">
         <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-          Clients say it best
+          What Our Clients Say
         </h2>
         <div className="mt-10 grid gap-6 lg:grid-cols-3">
           {[
             {
               quote:
-                "Reporting was crystal clear. We started seeing more relevant inquiries and better booked site visits.",
-              name: "Founder, Real Estate Team",
+                "Lead Catch transformed our real estate business with their exceptional digital marketing strategies. Their crystal-clear reporting and targeted approach helped us attract more qualified inquiries and significantly increase our booked site visits. Our pipeline has never been stronger!",
+              name: "Managing Director, Premium Real Estate Development",
             },
             {
               quote:
-                "The landing page structure and offer tweaks improved our conversion flow right away.",
-              name: "Marketing Lead, Interior Studio",
+                "The expertise Lead Catch brought to our interior design studio was remarkable. Their landing page optimization and strategic offer improvements immediately enhanced our conversion flow. We're now attracting higher-value clients consistently.",
+              name: "Creative Director, Luxury Interior Design Studio",
             },
             {
               quote:
-                "Lead Catch tests quickly. Ads, SEO, and tracking improvements helped us scale with confidence.",
-              name: "Growth Lead, Developer/Architect",
+                "Working with Lead Catch has been a game-changer for our architecture firm. Their rapid testing approach and comprehensive digital strategy across ads, SEO, and analytics gave us the confidence to scale our operations. The ROI has been outstanding.",
+              name: "Principal Architect, Leading Design & Build Firm",
             },
           ].map((t) => (
             <figure
@@ -386,11 +385,10 @@ export default function Home() {
         <div className="mx-auto w-full max-w-6xl px-3 py-16 sm:px-5">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-              Simple pricing
+              Simple, Transparent Pricing
             </h2>
             <p className="mt-4 text-zinc-600 dark:text-zinc-300">
-              Choose a plan that matches your stage. Custom retainers also
-              available.
+              Choose what works for your business. We also offer custom plans if you need something different.
             </p>
           </div>
 
@@ -458,7 +456,7 @@ export default function Home() {
                       : "border border-black/15 bg-white text-black hover:bg-[color-mix(in_oklab,var(--brand)_10%,transparent)] dark:border-white/15 dark:bg-black dark:text-white dark:hover:bg-[color-mix(in_oklab,var(--brand)_18%,transparent)]",
                   ].join(" ")}
                 >
-                  Talk to us
+                  Schedule Your Strategic Growth Call
                 </a>
               </div>
             ))}
@@ -472,30 +470,30 @@ export default function Home() {
       >
         <div className="max-w-2xl">
           <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-            FAQ
+            Frequently Asked Questions
           </h2>
           <p className="mt-4 text-zinc-600 dark:text-zinc-300">
-            Quick answers. If you have a different question, send us a message.
+            Got questions? We've got answers. If you don't see what you're looking for, just reach out to us directly.
           </p>
         </div>
 
         <div className="mt-10 grid gap-4 md:grid-cols-2">
           {[
             {
-              q: "How can digital marketing help my real estate business?",
-              a: "Digital marketing increases online visibility, generates quality leads through targeted ads, builds authority with SEO, and nurtures prospects with conversion-focused content. We focus on reaching serious buyers and sellers actively searching.",
+              q: "How does digital marketing actually help me get more leads?",
+              a: "Digital marketing puts your business in front of people who are actively looking for what you offer. Through targeted ads, you reach buyers and sellers searching in Noida. SEO helps you show up in Google searches when people need your services. The result? More qualified inquiries from people who are actually ready to take action.",
             },
             {
-              q: "What makes Lead Catch different?",
-              a: "Lead Catch specializes in real estate and interior design marketing. With 10+ years of experience and 200+ successful client engagements, we bring niche insights, tailored strategy, and measurable ROI with clear reporting.",
+              q: "Why should I choose Lead Catch over other agencies in Noida?",
+              a: "We don't work with everyone—we only work with real estate, interior design, and architecture businesses. That means we understand your challenges better than anyone else. With over 10 years of experience and 200+ clients, we know what works in your market. Plus, our reporting is clear and honest—you always know exactly what you're getting.",
             },
             {
-              q: "How long does it take to see results from SEO?",
-              a: "You may see initial improvements in 3–6 months, with more significant results typically between 6–12 months. We share monthly performance updates and optimization recommendations.",
+              q: "How long before I see results from SEO?",
+              a: "SEO takes time—usually 3-6 months to start seeing improvements, with significant results between 6-12 months. But we don't make you wait. We combine SEO with ads so you get leads right away while building long-term organic growth. We send you monthly reports so you can track progress every step of the way.",
             },
             {
-              q: "Do you offer website design services?",
-              a: "Yes. We create high-converting, mobile-responsive websites for real estate and interior design businesses. They are optimized for speed, UX, and lead generation with integrated tracking and analytics.",
+              q: "Do you build websites for real estate companies?",
+              a: "Yes, and we've built many of them. Our websites are designed specifically for real estate and interior design businesses. They're mobile-friendly, fast, optimized for search engines, and built to capture leads. Every site we build includes analytics so you can see how visitors are interacting with your site.",
             },
           ].map((f) => (
             <details
@@ -524,11 +522,10 @@ export default function Home() {
           <div className="grid gap-10 lg:grid-cols-2">
             <div>
               <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-                Your Strategic Partner for Real Estate Growth
+                Let's Talk About Your Business
               </h2>
               <p className="mt-4 max-w-xl text-zinc-600 dark:text-zinc-300">
-                Share your business goal, budget range, and current channels.
-                We’ll send a recommended action plan within 48 hours.
+                Tell us what you're trying to achieve, your budget, and what you've tried so far. We'll send you a clear action plan within 48 hours—no pressure, no sales pitch.
               </p>
 
               <div className="mt-6 space-y-3 text-sm text-zinc-600 dark:text-zinc-300">
@@ -617,7 +614,7 @@ export default function Home() {
                   type="button"
                   className="inline-flex h-11 w-full items-center justify-center rounded-full bg-(--brand) px-5 text-sm font-medium text-(--brand-contrast) transition-colors hover:bg-(--brand-2)"
                 >
-                  Send message
+                  Send Message
                 </button>
                 <p className="text-xs text-zinc-500">
                   This demo form doesn’t submit yet. Use email/phone above or

@@ -10,7 +10,7 @@ import { FreeAuditModal } from "@/components/FreeAuditModal";
 const navItems = [
   { href: "/about-us", label: "About Us" },
   { href: "/services", label: "Services" },
-  { href: "/projects", label: "Projects" },
+  { href: "/projects", label: "Case Studies" },
   { href: "/contact-us", label: "Contact Us" },
 ] as const;
 
@@ -115,7 +115,7 @@ export function SiteHeader() {
 
       <header className="sticky top-0 z-50 border-b border-black/10 bg-background/72 backdrop-blur-xl dark:border-white/10">
         <div className="border-b border-black/10 bg-[color-mix(in_oklab,var(--brand)_14%,var(--background))] px-3 py-2 text-xs text-foreground/85 dark:border-white/10 sm:px-5">
-          <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-2 sm:gap-3">
+          <div className="flex w-full flex-wrap items-center justify-between gap-2 sm:gap-3">
             <div className="flex min-w-0 flex-wrap items-center gap-x-4 gap-y-1">
               <a
                 href={`mailto:${contactDetails.email}`}
@@ -155,10 +155,10 @@ export function SiteHeader() {
             </div>
           </div>
         </div>
-        <div className="mx-auto mt-2 flex w-full max-w-6xl items-center justify-between gap-4 rounded-2xl border border-black/10 bg-background/80 px-3 py-3 shadow-[0_10px_32px_-24px_rgba(0,0,0,0.6)] backdrop-blur-xl sm:px-5 dark:border-white/10">
+        <div className="mt-2 flex w-full items-center justify-between gap-4 rounded-2xl border border-black/10 bg-background/80 px-3 py-3 shadow-[0_10px_32px_-24px_rgba(0,0,0,0.6)] backdrop-blur-xl sm:px-5 dark:border-white/10">
         <Link
           href="/"
-          className="group inline-flex min-w-0 flex-1 items-center gap-2 font-semibold tracking-tight"
+          className="group inline-flex min-w-0 items-center gap-2 font-semibold tracking-tight"
           aria-label="Home"
           target="_blank"
           rel="noopener noreferrer"
@@ -166,7 +166,7 @@ export function SiteHeader() {
           <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-background/80 ring-1 ring-black/10 backdrop-blur dark:ring-white/10">
             <Image
               src="/logo.png"
-              alt="LeadCatch logo"
+              alt="Lead Catch - Real Estate Marketing Agency in Noida"
               width={28}
               height={28}
               className="h-7 w-7"
@@ -178,7 +178,7 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 text-sm text-foreground/75 md:flex">
+        <nav className="hidden flex-1 items-center justify-center gap-6 text-sm text-foreground/75 md:flex">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -262,7 +262,7 @@ export function SiteHeader() {
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-background/80 ring-1 ring-black/10 backdrop-blur dark:ring-white/10">
                   <Image
                     src="/logo.png"
-                    alt="LeadCatch logo"
+                    alt="Lead Catch - Real Estate Marketing Agency in Noida"
                     width={28}
                     height={28}
                     className="h-7 w-7"
