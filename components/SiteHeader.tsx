@@ -21,7 +21,7 @@ const contactDetails = {
 
 const socialLinks = [
   {
-    href: "https://www.facebook.com/",
+    href: "https://www.facebook.com/people/Lead-Catch-Pvt-Ltd/61578123082806/",
     label: "Facebook",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4 fill-current">
@@ -30,7 +30,7 @@ const socialLinks = [
     ),
   },
   {
-    href: "https://www.instagram.com/",
+    href: "https://www.instagram.com/lead_catch_pvt_ltd_11/",
     label: "Instagram",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4 fill-current">
@@ -39,7 +39,7 @@ const socialLinks = [
     ),
   },
   {
-    href: "https://www.linkedin.com/",
+    href: "https://www.linkedin.com/company/lead-catch-pvt-ltd/",
     label: "LinkedIn",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4 fill-current">
